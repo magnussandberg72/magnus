@@ -3,99 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tjänster & konsultation</title>
+  <title>Tjänster & konsultation – Magnus T. Gustav Sandberg</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5; /* ljus/proffsig bakgrund */
+      background: linear-gradient(to bottom right, #f6f6f6, #eaeaea);
       color: #222;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      line-height: 1.6;
       text-align: center;
     }
 
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
     h1 {
+      color: #222;
       margin-bottom: 20px;
-      font-size: 2rem;
     }
 
     p {
       margin-bottom: 20px;
-      line-height: 1.6;
-      font-size: 1.05rem;
-    }
-
-    .price-section {
-      margin-bottom: 30px;
-      font-size: 1.1rem;
-      font-weight: 500;
-      line-height: 1.7;
-    }
-
-    .btn-container {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-width: 260px;
-      margin: 0 auto 30px;
     }
 
     .btn {
-      display: block;
-      width: 100%;
-      padding: 12px 20px;
-      text-align: center;
+      display: inline-block;
+      background-color: #333;
+      color: white;
       text-decoration: none;
-      font-weight: bold;
+      padding: 12px 20px;
       border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      background: #222;
-      color: #fff;
-      transition: background 0.3s;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.2s;
+      margin: 8px;
     }
 
     .btn:hover {
-      background: #444;
+      background-color: #555;
     }
 
-    .back-link {
-      margin-top: 10px;
-      display: inline-block;
-      color: #333;
-      text-decoration: underline;
-      font-size: 0.95rem;
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin-top: 40px;
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
+  <main>
     <h1>Tjänster & konsultation</h1>
 
     <p>
-      Jag erbjuder utveckling av webbsidor, appar och digital rådgivning
-      för både privatpersoner och företag.
+      Jag erbjuder utveckling av webbsidor, appar och digital rådgivning för både privatpersoner och företag.
     </p>
 
-    <div class="price-section">
-      Privat rådgivning: <strong>800 kr per timme</strong><br />
-      Företagsuppdrag: <strong>1400 kr per timme</strong>
-    </div>
+    <p><strong>Privat rådgivning:</strong> 800 kr per timme</p>
+    <p><strong>Företagsuppdrag:</strong> 1400 kr per timme</p>
 
-    <div class="btn-container">
-      <a href="magnus-CV.pdf" target="_blank" class="btn">Mitt CV (PDF)</a>
-      <a href="mailto:magnus.lulea@proton.me" class="btn">Kontakta mig</a>
+    <div>
+      <a href="magnus-CV.pdf" class="btn">Mitt CV (PDF)</a>
+      <a href="contact.html" class="btn">Kontakta mig</a>
+      <a href="index.html" class="btn">Tillbaka till startsidan</a>
     </div>
+  </main>
 
-    <a href="index.html" class="back-link">Tillbaka till startsidan</a>
-  </div>
+  <footer>
+    © 2025 Magnus T. Gustav Sandberg – Kalix, Sweden
+  </footer>
 </body>
 </html>
