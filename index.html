@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magnus T. Gustav Sandberg</title>
+  <title>Magnus T Gustav Sandberg</title>
   <style>
     body, html {
       margin: 0;
@@ -28,30 +28,40 @@
       z-index: -1;
     }
 
+    /* Mjuk skugga uppåt, ger kontrast men lämnar ansiktet fritt */
     .overlay {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
       height: 100%;
-      padding-bottom: 40px;
+      padding-bottom: 30px; /* mer luft i botten */
       text-align: center;
       color: white;
-      background: rgba(0, 0, 0, 0.35);
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.15) 50%,
+        rgba(0, 0, 0, 0) 100%
+      );
     }
 
+    /* Text under ansiktet */
     .intro {
-      background: rgba(0, 0, 0, 0.45);
-      padding: 20px;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 18px;
       border-radius: 10px;
-      margin-bottom: 40px;
+      margin-bottom: 80px; /* placerar texten längre ned från ansiktet */
       max-width: 90%;
+      font-size: 17px;
+      line-height: 1.4;
     }
 
     .buttons {
       display: flex;
       flex-direction: column;
       gap: 10px;
+      margin-bottom: 40px; /* stabil luft under knapparna */
     }
 
     .btn {
@@ -66,6 +76,14 @@
 
     .btn:hover {
       background-color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: white;
+      background-color: #333;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -88,5 +106,9 @@
       </div>
     </div>
   </div>
+
+  <footer>
+    © 2025 Magnus T Gustav Sandberg – Kalix, Sweden
+  </footer>
 </body>
 </html>
