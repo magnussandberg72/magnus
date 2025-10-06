@@ -5,72 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Magnus T Gustav Sandberg</title>
   <style>
-    body, html {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
       font-family: Arial, sans-serif;
-    }
-
-    .container {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .bg {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-
-    .overlay {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
-      height: 100%;
-      padding-bottom: 30px;
+      background: linear-gradient(to bottom right, #f6f6f6, #eaeaea);
+      color: #222;
       text-align: center;
-      color: white;
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.55) 0%,
-        rgba(0, 0, 0, 0.15) 50%,
-        rgba(0, 0, 0, 0) 100%
-      );
     }
 
-    /* 🔹 Mer luft (150px) under ansiktet */
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
     .intro {
-      background: rgba(0, 0, 0, 0.55);
-      padding: 18px;
+      background: rgba(0, 0, 0, 0.05);
+      padding: 20px;
       border-radius: 10px;
-      margin-bottom: 150px;
-      max-width: 90%;
-      font-size: 17px;
-      line-height: 1.4;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 40px;
     }
 
     .buttons {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      align-items: center;
+      gap: 15px;
       margin-bottom: 40px;
     }
 
     .btn {
+      display: inline-block;
       background-color: #333;
       color: white;
       text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 6px;
+      padding: 14px 24px;
+      border-radius: 8px;
       font-size: 16px;
-      transition: background 0.2s;
+      font-weight: bold;
+      width: 220px;
+      transition: background 0.3s;
     }
 
     .btn:hover {
@@ -78,33 +60,35 @@
     }
 
     footer {
-      text-align: center;
-      padding: 15px;
-      color: white;
       background-color: #333;
+      color: white;
+      padding: 15px;
       font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="AI-stylad-magnus.png" alt="Magnus T Gustav Sandberg" class="bg" />
-    <div class="overlay">
-      <div class="intro">
-        <p>
-          Jag designar appar och webbsidor – både egna projekt och uppdrag för andra.<br />
-          Eftersom jag lever på låg sjukersättning är varje betalning eller gåva för mitt arbete mycket uppskattad.
-        </p>
-      </div>
+  <header>
+    <img src="AI-stylad-magnus.png" alt="Magnus T Gustav Sandberg" />
+  </header>
 
-      <div class="buttons">
-        <a href="support.html" class="btn">Supporta mitt arbete</a>
-        <a href="about.html" class="btn">Om mig</a>
-        <a href="services.html" class="btn">Anlita mig</a>
-        <a href="contact.html" class="btn">Kontakt</a>
-      </div>
+  <main>
+    <div class="intro">
+      <p>
+        Jag designar appar och webbsidor – både egna projekt och uppdrag för andra.
+      </p>
+      <p>
+        Eftersom jag lever på låg sjukersättning är varje betalning eller gåva för mitt arbete mycket uppskattad.
+      </p>
     </div>
-  </div>
+
+    <div class="buttons">
+      <a href="support.html" class="btn">Supporta mitt arbete</a>
+      <a href="about.html" class="btn">Om mig</a>
+      <a href="services.html" class="btn">Anlita mig</a>
+      <a href="contact.html" class="btn">Kontakt</a>
+    </div>
+  </main>
 
   <footer>
     © 2025 Magnus T Gustav Sandberg – Kalix, Sweden
