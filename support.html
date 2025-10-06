@@ -1,156 +1,135 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Supporta mitt arbete</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support – Magnus T Gustav Sandberg</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      background: linear-gradient(to bottom right, #f6f6f6, #eaeaea);
       color: #222;
+      line-height: 1.6;
     }
 
-    .container {
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    main {
+      padding: 20px;
       max-width: 800px;
       margin: 0 auto;
-      padding: 30px 20px;
+      text-align: center;
     }
 
     h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+      color: #222;
+      margin-bottom: 15px;
     }
 
     p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
-    .section {
-      background: #fff;
+    .support-info {
+      background: white;
       padding: 20px;
-      border-radius: 6px;
-      margin-bottom: 25px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      text-align: left;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 20px;
-      background: #222;
-      color: #fff;
+      background-color: #333;
+      color: white;
       text-decoration: none;
+      padding: 12px 20px;
       border-radius: 6px;
+      font-size: 16px;
       font-weight: bold;
-      text-align: center;
-      cursor: pointer;
+      transition: background 0.2s;
       border: none;
-      transition: background 0.3s;
+      margin-top: 10px;
+      cursor: pointer;
     }
 
     .btn:hover {
-      background: #444;
+      background-color: #555;
     }
 
-    .copy-btn {
-      margin-left: 10px;
-      background: #333;
-      font-size: 0.9rem;
-      padding: 8px 14px;
-    }
-
-    .bank-hidden {
-      display: none;
-      margin-top: 15px;
-      line-height: 1.7;
-      font-size: 1rem;
-    }
-
-    .button-row {
+    .nav-buttons {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 40px;
+      gap: 10px;
+      margin-top: 30px;
     }
 
-    .button-row a {
-      flex: 1;
-      min-width: 120px;
+    .thankyou {
+      margin-top: 25px;
+      font-style: italic;
+      color: #333;
+      background: rgba(0, 0, 0, 0.05);
+      padding: 12px 16px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #333;
+      color: white;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Supporta mitt arbete</h1>
+  <header>
+    <img src="magnus-irl.jpg" alt="Magnus T Gustav Sandberg" />
+  </header>
+
+  <main>
+    <h1>Support</h1>
     <p>
-      Ditt stöd hjälper mig fortsätta utveckla appar, webbsidor och projekt som gör skillnad.
-      Varje gåva eller betalning, liten som stor, uppskattas.
+      Tack för att du vill stödja mitt arbete!  
+      All hjälp gör stor skillnad – varje bidrag går till utvecklingen av mina projekt och fortsatt arbete.
     </p>
 
-    <!-- Swish-sektion -->
-    <div class="section">
-      <h2>Swish</h2>
-      <p>
-        <strong>Swishnummer:</strong> <span id="swishNum">072-8502584</span>
-        <button class="btn copy-btn" onclick="copyText('072-8502584')">Kopiera</button>
-      </p>
-      <p style="font-size:0.95rem; color:#555;">
-        Märk gärna betalningen med “Stöd” eller ditt namn.
-      </p>
+    <div class="support-info">
+      <p><strong>📱 Swish:</strong> 072-8502584</p>
+      <p><strong>🏦 Bank:</strong> (skickas på begäran via e-post)</p>
+      <p>Märk betalningen med <em>”Stöd”</em> eller ditt namn.</p>
+      <button onclick="copySwish()" class="btn">Kopiera Swish-nummer</button>
     </div>
 
-    <!-- Banköverföring -->
-    <div class="section">
-      <h2>Banköverföring</h2>
-      <button class="btn" onclick="toggleBank()">Visa bankuppgifter</button>
-      <div id="bankInfo" class="bank-hidden">
-        <p><strong>Handelsbanken</strong></p>
-        <p>
-          Clearing: 6201<br>
-          Konto: 943 291 011<br>
-          IBAN: SE43 6000 0000 0009 4329 1011<br>
-          BIC: HANDSESS
-        </p>
-        <button class="btn copy-btn" onclick="copyBankInfo()">Kopiera alla uppgifter</button>
-        <p style="font-size:0.95rem; color:#555; margin-top:12px;">
-          Märk gärna betalningen med “Stöd” eller ditt namn.
-        </p>
-      </div>
-    </div>
-
-    <!-- Navigeringsknappar nederst: Om mig | Tillbaka | Tjänster -->
-    <div class="button-row">
+    <div class="nav-buttons">
       <a href="about.html" class="btn">Om mig</a>
-      <a href="index.html" class="btn">Tillbaka</a>
       <a href="services.html" class="btn">Tjänster</a>
+      <a href="contact.html" class="btn">Kontakt</a>
+      <a href="index.html" class="btn">Tillbaka</a>
     </div>
-  </div>
+
+    <div class="thankyou">
+      ❤️ Tack för ditt stöd – det betyder mycket och gör det möjligt för mig att fortsätta skapa och hjälpa andra.
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Magnus T Gustav Sandberg – Kalix, Sweden
+  </footer>
 
   <script>
-    function copyText(text) {
-      navigator.clipboard.writeText(text)
-        .then(() => alert("Kopierat: " + text))
-        .catch(() => alert("Kunde inte kopiera"));
-    }
-
-    function toggleBank() {
-      const bankInfo = document.getElementById('bankInfo');
-      bankInfo.style.display = (bankInfo.style.display === 'block' ? 'none' : 'block');
-    }
-
-    function copyBankInfo() {
-      const text = `Handelsbanken
-Clearing: 6201
-Konto: 943 291 011
-IBAN: SE43 6000 0000 0009 4329 1011
-BIC: HANDSESS`;
-      navigator.clipboard.writeText(text)
-        .then(() => alert("Bankuppgifter kopierade"))
-        .catch(() => alert("Kunde inte kopiera"));
+    function copySwish() {
+      navigator.clipboard.writeText("072-8502584");
+      alert("Swish-nummer kopierat!");
     }
   </script>
 </body>
