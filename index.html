@@ -8,9 +8,13 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #f6f6f6, #eaeaea);
-      color: #222;
+      background-color: #111;
+      color: #fff;
       text-align: center;
+    }
+
+    header {
+      position: relative;
     }
 
     header img {
@@ -19,19 +23,38 @@
       display: block;
     }
 
+    /* Mjuk gradient under bilden */
+    .gradient {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0), #111);
+    }
+
     main {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: 0 auto;
+      background: #222;
+      padding: 60px 20px 50px;
+    }
+
+    .tagline {
+      font-size: 16px;
+      color: #ccc;
+      letter-spacing: 0.5px;
+      margin-bottom: 15px;
     }
 
     .intro {
-      background: rgba(0, 0, 0, 0.05);
-      padding: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      padding: 22px 18px;
       border-radius: 10px;
+      max-width: 750px;
+      margin: 0 auto 40px;
       font-size: 18px;
       line-height: 1.6;
-      margin-bottom: 40px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     }
 
     .buttons {
@@ -39,29 +62,61 @@
       flex-direction: column;
       align-items: center;
       gap: 15px;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
     .btn {
-      display: inline-block;
-      background-color: #333;
+      background-color: #444;
       color: white;
       text-decoration: none;
       padding: 14px 24px;
       border-radius: 8px;
       font-size: 16px;
       font-weight: bold;
-      width: 220px;
+      width: 200px;
       transition: background 0.3s;
     }
 
     .btn:hover {
-      background-color: #555;
+      background-color: #666;
+    }
+
+    /* Projekt-teaser */
+    .teaser {
+      background: #1a1a1a;
+      padding: 40px 20px 60px;
+    }
+
+    .teaser h2 {
+      color: #fff;
+      font-size: 22px;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .projects img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .projects img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(255, 255, 255, 0.3);
     }
 
     footer {
-      background-color: #333;
-      color: white;
+      background-color: #000;
+      color: #ccc;
       padding: 15px;
       font-size: 14px;
     }
@@ -70,25 +125,33 @@
 <body>
   <header>
     <img src="AI-stylad-magnus.png" alt="Magnus T Gustav Sandberg" />
+    <div class="gradient"></div>
   </header>
 
   <main>
+    <div class="tagline">Webbdesign, AI och framtidsprojekt med hjärta</div>
+
     <div class="intro">
-      <p>
-        Jag designar appar och webbsidor – både egna projekt och uppdrag för andra.
-      </p>
-      <p>
-        Eftersom jag lever på låg sjukersättning är varje betalning eller gåva för mitt arbete mycket uppskattad.
-      </p>
+      <p>Jag designar appar och webbsidor – både egna projekt och uppdrag för andra.</p>
+      <p>Eftersom jag lever på låg sjukersättning är varje betalning eller gåva för mitt arbete mycket uppskattad.</p>
     </div>
 
     <div class="buttons">
-      <a href="support.html" class="btn">Supporta mitt arbete</a>
+      <a href="support.html" class="btn">Support</a>
       <a href="about.html" class="btn">Om mig</a>
-      <a href="services.html" class="btn">Anlita mig</a>
+      <a href="services.html" class="btn">Tjänster</a>
       <a href="contact.html" class="btn">Kontakt</a>
     </div>
   </main>
+
+  <section class="teaser">
+    <h2>Några av mina projekt</h2>
+    <div class="projects">
+      <img src="vision-framtid-2025.png" alt="Vision Framtid 2025" />
+      <img src="microloans1.png" alt="Microloan Project" />
+      <img src="vico1-visionframtid.png" alt="VICO-1 Vision Framtid" />
+    </div>
+  </section>
 
   <footer>
     © 2025 Magnus T Gustav Sandberg – Kalix, Sweden
