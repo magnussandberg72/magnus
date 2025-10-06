@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supporta mitt arbete</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #222;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #444;
+    }
+
+    .copy-btn {
+      margin-left: 10px;
+      background: #333;
+      font-size: 0.9rem;
+      padding: 8px 14px;
+    }
+
+    .bank-hidden {
+      display: none;
+      margin-top: 15px;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 40px;
+    }
+
+    .button-row a {
+      flex: 1;
+      min-width: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Supporta mitt arbete</h1>
+    <p>
+      Ditt stöd hjälper mig fortsätta utveckla appar, webbsidor och projekt som gör skillnad.
+      Varje gåva eller betalning, liten som stor, uppskattas.
+    </p>
+
+    <!-- Swish-sektion -->
+    <div class="section">
+      <h2>Swish</h2>
+      <p>
+        <strong>Swishnummer:</strong> <span id="swishNum">072-8502584</span>
+        <button class="btn copy-btn" onclick="copyText('072-8502584')">Kopiera</button>
+      </p>
+      <p style="font-size:0.95rem; color:#555;">
+        Märk gärna betalningen med “Stöd” eller ditt namn.
+      </p>
+    </div>
+
+    <!-- Banköverföring -->
+    <div class="section">
+      <h2>Banköverföring</h2>
+      <button class="btn" onclick="toggleBank()">Visa bankuppgifter</button>
+      <div id="bankInfo" class="bank-hidden">
+        <p><strong>Handelsbanken</strong></p>
+        <p>
+          Clearing: 6201<br>
+          Konto: 943 291 011<br>
+          IBAN: SE43 6000 0000 0009 4329 1011<br>
+          BIC: HANDSESS
+        </p>
+        <button class="btn copy-btn" onclick="copyBankInfo()">Kopiera alla uppgifter</button>
+        <p style="font-size:0.95rem; color:#555; margin-top:12px;">
+          Märk gärna betalningen med “Stöd” eller ditt namn.
+        </p>
+      </div>
+    </div>
+
+    <!-- Navigeringsknappar nederst: Om mig | Tillbaka | Tjänster -->
+    <div class="button-row">
+      <a href="about.html" class="btn">Om mig</a>
+      <a href="index.html" class="btn">Tillbaka</a>
+      <a href="services.html" class="btn">Tjänster</a>
+    </div>
+  </div>
+
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text)
+        .then(() => alert("Kopierat: " + text))
+        .catch(() => alert("Kunde inte kopiera"));
+    }
+
+    function toggleBank() {
+      const bankInfo = document.getElementById('bankInfo');
+      bankInfo.style.display = (bankInfo.style.display === 'block' ? 'none' : 'block');
+    }
+
+    function copyBankInfo() {
+      const text = `Handelsbanken
+Clearing: 6201
+Konto: 943 291 011
+IBAN: SE43 6000 0000 0009 4329 1011
+BIC: HANDSESS`;
+      navigator.clipboard.writeText(text)
+        .then(() => alert("Bankuppgifter kopierade"))
+        .catch(() => alert("Kunde inte kopiera"));
+    }
+  </script>
+</body>
+</html>
