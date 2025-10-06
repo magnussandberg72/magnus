@@ -28,14 +28,13 @@
       z-index: -1;
     }
 
-    /* Mjuk skugga uppåt, ger kontrast men lämnar ansiktet fritt */
     .overlay {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
       height: 100%;
-      padding-bottom: 30px; /* mer luft i botten */
+      padding-bottom: 30px;
       text-align: center;
       color: white;
       background: linear-gradient(
@@ -46,12 +45,12 @@
       );
     }
 
-    /* Text under ansiktet */
+    /* 🔹 Mer luft (150px) under ansiktet */
     .intro {
       background: rgba(0, 0, 0, 0.55);
       padding: 18px;
       border-radius: 10px;
-      margin-bottom: 80px; /* placerar texten längre ned från ansiktet */
+      margin-bottom: 150px;
       max-width: 90%;
       font-size: 17px;
       line-height: 1.4;
@@ -61,7 +60,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      margin-bottom: 40px; /* stabil luft under knapparna */
+      margin-bottom: 40px;
     }
 
     .btn {
@@ -89,7 +88,7 @@
 </head>
 <body>
   <div class="container">
-    <img src="AI-stylad-magnus.png" alt="Magnus T. Gustav Sandberg" class="bg" />
+    <img src="AI-stylad-magnus.png" alt="Magnus T Gustav Sandberg" class="bg" />
     <div class="overlay">
       <div class="intro">
         <p>
