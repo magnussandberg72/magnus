@@ -3,114 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services & Consulting – Magnus T Gustav Sandberg</title>
-  <meta name="description" content="Professional web design, app development, and consulting by Magnus T Gustav Sandberg." />
+  <title>🌍 Services – Magnus T Gustav Sandberg</title>
+  <link rel="stylesheet" href="style.css?v=2" />
+
   <style>
     body {
+      background: #0b1220;
+      color: #f2f5ff;
+      font-family: "Inter", sans-serif;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
-      color: #222;
       text-align: center;
+      line-height: 1.7;
     }
 
-    header {
-      padding: 40px 20px 10px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 32px;
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      margin: 40px 0 10px;
+      color: #f8f9ff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     }
 
     p {
-      max-width: 680px;
-      margin: 10px auto;
-      line-height: 1.6;
-      font-size: 18px;
-      color: #444;
+      max-width: 800px;
+      margin: 0 auto 25px;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 17px;
     }
 
-    strong {
-      color: #000;
+    .card {
+      background: #121a2c;
+      border-radius: 16px;
+      margin: 30px auto;
+      padding: 25px 20px 35px;
+      max-width: 860px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      text-align: left;
     }
 
-    .rates {
-      margin: 30px 0;
-      font-size: 18px;
-      line-height: 1.8;
+    .card h2 {
+      color: #7aa2ff;
+      font-size: 22px;
+      margin-bottom: 12px;
     }
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin: 30px 0;
+    .card p {
+      color: #cbd5f7;
+      font-size: 16px;
     }
 
     .btn {
-      background: #222;
-      color: #fff;
-      padding: 14px 22px;
-      border-radius: 10px;
-      text-decoration: none;
+      display: inline-block;
+      background: #7aa2ff;
+      color: #06122a;
       font-weight: 600;
-      transition: background 0.3s;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 26px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
-      background: #333;
+      background: #9bb8ff;
+      transform: scale(1.05);
     }
 
-    section.projects {
-      background: #111;
-      color: #eee;
-      padding: 40px 20px 60px;
+    .button-group {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
     }
 
-    section.projects h2 {
-      font-size: 22px;
-      margin-bottom: 20px;
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin: 20px 0 10px;
+    }
+
+    .project-gallery img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
     }
 
     footer {
-      background: #000;
-      color: #aaa;
-      padding: 18px;
+      color: #999;
       font-size: 14px;
+      padding: 40px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+  <h1>🌍 Services</h1>
+  <p>
+    I design and develop web platforms, apps and humanitarian tech under the umbrella of
+    <strong>Vision Framtid</strong> — merging technology, compassion and purpose.
+  </p>
 
-  <header>
-    <h1>Services & Consulting</h1>
+  <!-- Project 1 -->
+  <section class="card">
+    <h2>Example Project: Fatimah Support</h2>
     <p>
-      I offer professional web design, app development, and digital consulting for individuals and companies.  
-      My focus is on creating meaningful projects — built with precision, beauty, and purpose.
+      One of my ongoing humanitarian projects is <strong>Fatimah Support</strong> — a site built to help a woman in Ghana receive food and basic support through direct donations.
     </p>
-  </header>
+    <div class="button-group">
+      <a href="https://magnussandberg72.github.io/fatimah-support/index.html" target="_blank" class="btn">Visit Fatimah Support →</a>
+    </div>
+    <p style="text-align:center;margin-top:10px;font-style:italic;color:#b7c3ea;">(my latest project)</p>
+  </section>
 
-  <div class="rates">
-    <p><strong>Private consultations:</strong> $75/hour</p>
-    <p><strong>Company projects:</strong> $130/hour</p>
-  </div>
+  <!-- Project 2 -->
+  <section class="card">
+    <h2>Future Projects</h2>
+    <p>
+      Current focus: expanding <strong>BAUTA projects</strong> in Africa — including free hospitals,
+      medicine factories, microloan banks, and renewable energy hubs. <br>
+      Motto: <em>"Free of charge — for Africa."</em>
+    </p>
 
-  <div class="buttons">
-    <a href="cv.pdf" class="btn">My CV (PDF)</a>
-    <a href="contact.html" class="btn">Contact me</a>
-    <a href="index.html" class="btn">Back to home</a>
-  </div>
+    <!-- 🔹 Gallery -->
+    <div class="project-gallery">
+      <img src="../public/microloans3.png" alt="Microloan Projects">
+      <img src="../public/vision-framtid-2025.png" alt="Vision Framtid">
+      <img src="../public/vico1-visionframtid.png" alt="VICO-1 Medical AI">
+      <img src="../public/BAUTA-waterwellsdrilling.png" alt="BAUTA Water Wells Drilling Project">
+    </div>
 
-  <section class="projects">
-    <h2>Some of my projects</h2>
-    <p>Including Vision Framtid, Fatimah Support, and BAUTA initiatives for Africa.</p>
+    <!-- 🔹 Buttons -->
+    <div class="button-group">
+      <a href="services.html" class="btn">Services</a>
+      <a href="support.html" class="btn">Support</a>
+      <a href="index.html" class="btn">Back</a>
+    </div>
   </section>
 
   <footer>
-    © 2025 Magnus T Gustav Sandberg – Kalix, Sweden
+    © 2025 Magnus T Gustav Sandberg – Vision Framtid
   </footer>
-
 </body>
 </html>
