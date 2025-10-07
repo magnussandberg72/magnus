@@ -3,159 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🌍 Tjänster – Magnus T Gustav Sandberg</title>
-  <link rel="stylesheet" href="style.css?v=2" />
+  <title>💼 Tjänster – Magnus T Gustav Sandberg</title>
+  <link rel="stylesheet" href="style.css?v=2">
 
   <style>
     body {
       background: #0b1220;
       color: #f2f5ff;
       font-family: "Inter", sans-serif;
-      margin: 0;
       text-align: center;
-      line-height: 1.7;
+      margin: 0;
     }
 
-    h1 {
-      font-size: clamp(28px, 5vw, 40px);
-      margin: 40px 0 10px;
-      color: #f8f9ff;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    header {
+      padding: 60px 20px 30px;
+      background: linear-gradient(180deg, #111827 0%, #0b1220 100%);
     }
 
-    p {
-      max-width: 800px;
-      margin: 0 auto 25px;
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 17px;
-    }
-
-    .card {
-      background: #121a2c;
-      border-radius: 16px;
-      margin: 30px auto;
-      padding: 25px 20px 35px;
-      max-width: 860px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-      text-align: left;
-    }
-
-    .card h2 {
-      color: #7aa2ff;
-      font-size: 22px;
+    header h1 {
+      font-size: clamp(28px, 5vw, 38px);
+      font-weight: 700;
+      color: #fff;
       margin-bottom: 12px;
     }
 
-    .card p {
-      color: #cbd5f7;
+    header p {
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.85);
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #7aa2ff;
+      margin-top: 40px;
+    }
+
+    p {
+      line-height: 1.7;
+      color: rgba(255,255,255,0.9);
       font-size: 16px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #7aa2ff;
-      color: #06122a;
-      font-weight: 600;
-      border: none;
-      border-radius: 12px;
-      padding: 12px 26px;
-      cursor: pointer;
-      font-size: 16px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #9bb8ff;
-      transform: scale(1.05);
-    }
-
-    .button-group {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
+      max-width: 750px;
+      margin: 0 auto 20px;
     }
 
     .project-gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 16px;
-      margin: 20px 0 10px;
+      gap: 14px;
+      margin: 20px 0 40px;
     }
 
     .project-gallery img {
-      width: 150px;
-      height: 100px;
+      width: 160px;
+      height: 110px;
       object-fit: cover;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
     }
 
     .project-gallery img:hover {
       transform: scale(1.05);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    }
+
+    .nav-links {
+      margin: 40px 0 60px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .nav-btn {
+      background: #7aa2ff;
+      color: #06122a;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      background: #9bb8ff;
+      transform: scale(1.05);
     }
 
     footer {
+      border-top: 1px solid rgba(255,255,255,0.1);
       color: #999;
       font-size: 14px;
-      padding: 40px 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 40px;
+      padding: 30px 20px;
     }
   </style>
 </head>
 <body>
-  <h1>🌍 Tjänster</h1>
-  <p>
-    Jag designar och utvecklar webbplattformar, appar och humanitära tekniska lösningar under paraplyet
-    <strong>Vision Framtid</strong> — där teknik möter kärlek, omtanke och mening.
-  </p>
 
-  <!-- Projekt 1 -->
-  <section class="card">
-    <h2>Exempelprojekt: Fatimah Support</h2>
+  <header>
+    <h1>💼 Tjänster</h1>
+    <p>Jag erbjuder teknisk utveckling, design, AI-rådgivning och framtidsstrategier.  
+      Du kan anlita mig både som privatperson och företag – med flexibla upplägg.</p>
+  </header>
+
+  <main>
+    <h2>💻 Uppdrag & Konsultarbete</h2>
     <p>
-      Ett av mina pågående projekt är <strong>Fatimah Support</strong> — en sida skapad för att hjälpa en kvinna i Ghana
-      att få mat och grundläggande stöd via direkta gåvor.
+      Jag arbetar med webb- och app-utveckling, AI-integration, strategi och design inom ramen för Vision Framtid.  
+      Varje uppdrag skräddarsys utifrån kundens behov, med fokus på långsiktighet, etik och kvalitet.
     </p>
-    <div class="button-group">
-      <a href="https://magnussandberg72.github.io/fatimah-support/index.html" target="_blank" class="btn">Se Fatimah Support →</a>
-    </div>
-    <p style="text-align:center;margin-top:10px;font-style:italic;color:#b7c3ea;">(mitt senaste projekt)</p>
-  </section>
-
-  <!-- Projekt 2 -->
-  <section class="card">
-    <h2>Framtida projekt</h2>
     <p>
-      Nuvarande fokus är att expandera <strong>BAUTA-projekten</strong> i Afrika — med gratis sjukhus,
-      medicinfabriker, mikrolånebanker och förnybar energi.<br>
-      Motto: <em>"Free of charge – for Africa."</em>
+      💰 <strong>Prisnivåer:</strong><br>
+      • Privatpersoner: <strong>800 kr/timme</strong><br>
+      • Företag och organisationer: <strong>1500 kr/timme</strong>
     </p>
 
-    <!-- 🔹 Galleri -->
+    <h2>🌍 Framtida projekt – BAUTA Africa</h2>
+    <p>
+      Nuvarande fokus är att expandera <strong>BAUTA-projekten</strong> i Afrika – med gratis sjukhus, medicinfabriker, mikrolåns-banker och förnybar energi.  
+      Motto: <em>“Free of charge – for Africa.”</em>
+    </p>
+
     <div class="project-gallery">
-      <img src="public/microloans3.png" alt="Mikrolåneprojekt">
-      <img src="public/vision-framtid-2025.png" alt="Vision Framtid">
-      <img src="public/visionframtid-cancer-cure.png" alt="Vision Framtid Cancer Cure">
-      <img src="public/BAUTA-waterwellsdrilling.png" alt="BAUTA Brunnsborrningsprojekt">
+      <img src="microlaons3.png" alt="Bank of Microloans">
+      <img src="visionframtid-cancer-cure.png" alt="Vision Framtid – Cancer Cure">
+      <img src="BAUTA-waterwellsdrilling.png" alt="Drill Baby Drill – Water for Africa">
     </div>
 
-    <!-- 🔹 Knappar -->
-    <div class="button-group">
-      <a href="services.html" class="btn">Tjänster</a>
-      <a href="support.html" class="btn">Stöd</a>
-      <a href="index.html" class="btn">Tillbaka</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-btn">Hem</a>
+      <a href="support.html" class="nav-btn">Stöd</a>
+      <a href="contact.html" class="nav-btn">Kontakt</a>
     </div>
-  </section>
+  </main>
 
   <footer>
     © 2025 Magnus T Gustav Sandberg – Vision Framtid
   </footer>
+
 </body>
 </html>
