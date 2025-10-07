@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Magnus T Gustav Sandberg</title>
+  <meta name="description" content="Get in touch with Magnus T Gustav Sandberg — web developer, creator, and founder of Vision Framtid." />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #111, #222);
+      color: #eee;
+      text-align: center;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    p {
+      color: #ddd;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      color: #222;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .btn {
+      background-color: #444;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #666;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      color: #ccc;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../magnus-irl.jpg" alt="Magnus T Gustav Sandberg" />
+  </header>
+
+  <main>
+    <h1>Contact Magnus</h1>
+    <p>
+      You’re welcome to reach out for collaborations, project ideas, or consulting inquiries.  
+      I personally respond to all messages when possible.
+    </p>
+
+    <p><strong>Email:</strong> <a href="mailto:magnus.lulea@proton.me" style="color:#58a6ff;">magnus.lulea@proton.me</a></p>
+    <p><strong>Phone:</strong> +46 72 850 2584</p>
+
+    <form action="mailto:magnus.lulea@proton.me" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <div style="margin-top:40px;">
+      <a href="about.html" class="btn">About</a>
+      <a href="support.html" class="btn">Support</a>
+      <a href="index.html" class="btn">Back</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Magnus T Gustav Sandberg — Kalix, Sweden
+  </footer>
+
+</body>
+</html>
