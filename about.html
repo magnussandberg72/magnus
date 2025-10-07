@@ -1,146 +1,188 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Om mig – Magnus T. Gustav Sandberg</title>
-  <meta name="description" content="Webbdesign, AI och framtidsprojekt med hjärta – av Magnus T Gustav Sandberg, Kalix, Sverige.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>👤 Om mig – Magnus T Gustav Sandberg</title>
+  <link rel="stylesheet" href="style.css?v=2">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      background: #f8f9ff;
+      color: #111;
+      font-family: "Inter", sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom right, #f6f6f6, #eaeaea);
-      color: #222;
-      line-height: 1.6;
+      text-align: center;
     }
 
-    header img {
-      width: 100%;
-      height: auto;
-      display: block;
+    header {
+      background: linear-gradient(180deg, #0b1220 0%, #1e293b 100%);
+      color: white;
+      padding: 60px 20px 40px;
+    }
+
+    header h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .portrait {
+      margin: 40px 0 20px;
+    }
+
+    .portrait img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 25px rgba(0,0,0,0.25);
     }
 
     main {
       padding: 20px;
-      max-width: 800px;
+      max-width: 750px;
       margin: 0 auto;
-    }
-
-    h1 {
-      text-align: center;
-      color: #222;
+      text-align: left;
     }
 
     h2 {
-      margin-top: 30px;
-      color: #333;
+      color: #0b1220;
+      margin-top: 40px;
+      text-align: center;
     }
 
     p {
-      margin-bottom: 15px;
+      line-height: 1.7;
+      font-size: 16px;
     }
 
-    .btn {
-      display: inline-block;
-      background-color: #333;
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.2s;
-    }
-
-    .btn:hover {
-      background-color: #555;
-    }
-
-    .btn-fatimah {
-      display: inline-block;
-      background-color: #333;
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    .btn-fatimah:hover {
-      background-color: #555;
-    }
-
-    .note {
-      margin-top: 5px;
-      font-style: italic;
-      color: #2b2b2b;
-    }
-
-    footer {
+    /* BAUTA-galleri */
+    .bauta-gallery {
       text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: white;
       margin-top: 40px;
     }
 
-    .nav-buttons {
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin: 10px 0 30px;
+    }
+
+    .project-gallery img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Navigationsknappar */
+    .nav-links {
+      margin: 40px 0;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 30px;
+      gap: 12px;
+    }
+
+    .nav-btn {
+      background: #1e293b;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      background: #334155;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #1e1e1e;
+      color: #aaa;
+      font-size: 14px;
+      padding: 30px 20px;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="magnus-AI-2025.png" alt="Magnus T. Gustav Sandberg" />
+    <h1>👤 Om mig</h1>
+    <p>Jag heter Magnus T Gustav Sandberg, entreprenör och grundare av Vision Framtid — en helhetsvision som förenar teknik, etik och mänsklig omtanke.</p>
   </header>
 
+  <div class="portrait">
+    <img src="magnus-AI-2025.png" alt="Magnus T Gustav Sandberg AI-porträtt">
+  </div>
+
   <main>
-    <h1>Om mig</h1>
-
-    <h2>Vad jag gör</h2>
+    <h2>Bakgrund</h2>
     <p>
-      Jag utvecklar digitala lösningar, webbplatser och appar för både privatpersoner och företag.
-      Mitt fokus ligger på enkelhet, funktion och design – alltid med omtanke och syfte.
+      Jag är född i Boden och uppvuxen i Morjärv vid Kalixälven. Med rötter i Norrbotten och hjärtat i hela nationen arbetar jag för att bygga broar mellan teknik, tro och mänsklighet.  
+      Genom Vision Framtid utvecklar jag digitala lösningar, energiprojekt, medicinsk forskning och sociala initiativ som ska göra skillnad globalt.
     </p>
 
-    <h2>Vision & drivkraft</h2>
+    <h2>Projekt och arbete</h2>
     <p>
-      Jag tror på teknikens möjlighet att skapa hopp och förändring. Genom Vision Framtid
-      bygger jag projekt som gynnar både mig och andra.
+      Jag driver flera tekniska och humanitära projekt – bland annat <strong>Fatimah-support</strong>, som hjälper kvinnor i Ghana med mat och grundläggande stöd, samt <strong>Mushroom Maniacs</strong> – en app för psykisk hälsa och gemenskap.
     </p>
 
-    <h2>Exempelprojekt</h2>
-    <p>
-      Ett av mina senaste uppdrag är <strong>Fatimah Support</strong> – en sida jag byggde för att ge stöd och synlighet till en person i behov av hjälp.
-      Den är mobilvänlig, enkel och personlig i sin utformning.
-    </p>
-
-    <a href="https://magnussandberg72.github.io/fatimah-support/" class="btn-fatimah">Fatimah-sajten ^^</a>
-    <p class="note">(mitt senaste projekt)</p>
+    <div style="text-align:center; margin:20px 0;">
+      <a href="https://magnussandberg72.github.io/fatimah-support/index.html" class="nav-btn">Fatimah-sajten ^^</a>
+      <p><em>(mitt senaste projekt)</em></p>
+    </div>
 
     <h2>Framtida projekt – under uppbyggnad</h2>
     <p>
-      Jag fortsätter utveckla nya digitala lösningar och samarbeten. Flera av dem är i planerings-
-      eller uppstartsfas och kommer publiceras när de är redo att visas upp.
-    </p>
-    <p>
-      En del av detta inkluderar sociala initiativ och välgörenhetsidéer kopplade till
-      <strong>BAUTA-projekten</strong> – långsiktiga satsningar för att stötta människor och utveckling i bland annat Afrika.
+      Jag fortsätter utveckla nya digitala lösningar och samarbeten. Flera av dem är i planerings- eller uppstartsfas och kommer publiceras när de är redo att visas upp.  
+      En del av detta inkluderar sociala initiativ och välgörenhetsidéer kopplade till <strong>BAUTA-projekten</strong> – långsiktiga satsningar för att stötta människor och utveckling i bland annat Afrika.
     </p>
 
-    <div class="nav-buttons">
-      <a href="services.html" class="btn">Tjänster</a>
-      <a href="support.html" class="btn">Support</a>
-      <a href="index.html" class="btn">Tillbaka</a>
+    <!-- 🔹 BAUTA-projektgalleri -->
+    <section class="bauta-gallery">
+      <h3>🌍 BAUTA-projekten – för Afrika</h3>
+      <p style="max-width:640px;margin:0 auto 20px;">
+        Ett urval av de pågående initiativen inom Vision Framtid – vattenborrning, hållbar energi och infrastruktur.  
+        Allt med mottot: <strong>“Free of charge – for Africa.”</strong>
+      </p>
+
+      <div class="project-gallery">
+        <img src="BAUTA-vision.png" alt="BAUTA Vision">
+        <img src="BAUTA-waterwellsdrilling.png" alt="BAUTA Water Wells Drilling">
+        <img src="BAUTA-1000rigs.png" alt="BAUTA 1000 Drilling Rigs">
+      </div>
+    </section>
+
+    <div class="nav-links">
+      <a href="index.html" class="nav-btn">Hem</a>
+      <a href="services.html" class="nav-btn">Tjänster</a>
+      <a href="support.html" class="nav-btn">Support</a>
+      <a href="contact.html" class="nav-btn">Tillbaka</a>
     </div>
   </main>
 
   <footer>
-    © 2025 Magnus T. Gustav Sandberg – Kalix, Sweden
+    © 2025 Magnus T Gustav Sandberg – Kalix, Sweden
   </footer>
+
 </body>
 </html>
