@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>💖 Stöd mitt arbete</title>
+  <title>💖 Stötta arbetet med sajt/app</title>
   <link rel="stylesheet" href="style.css?v=2">
 
   <style>
@@ -15,8 +15,9 @@
       margin: 0;
     }
 
+    /* Hero-del */
     .hero {
-      padding: 60px 20px 40px;
+      padding: 50px 20px 20px;
       background: linear-gradient(180deg, #111827 0%, #0b1220 100%);
     }
 
@@ -35,11 +36,26 @@
       color: rgba(255,255,255,0.85);
     }
 
+    /* Porträttbild */
+    .portrait {
+      text-align: center;
+      margin: 30px 0 20px;
+    }
+
+    .portrait img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 25px rgba(255,255,255,0.15);
+    }
+
+    /* Kort för stödinfo */
     main {
       background: #f8f9ff;
       color: #111;
       border-radius: 16px;
-      margin: 40px 20px;
+      margin: 30px 20px 40px;
       padding: 30px 20px 50px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
@@ -55,6 +71,7 @@
       line-height: 1.7;
     }
 
+    /* Knappar */
     .button-group {
       margin-top: 25px;
       display: flex;
@@ -80,6 +97,31 @@
       transform: scale(1.05);
     }
 
+    /* Navigationsknappar längst ner */
+    .nav-links {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #f2f5ff;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255,255,255,0.1);
+      transform: scale(1.05);
+    }
+
     footer {
       color: #999;
       font-size: 14px;
@@ -89,14 +131,21 @@
   </style>
 </head>
 <body>
+  <!-- Hero -->
   <section class="hero">
-    <h1>💖 Stöd mitt arbete</h1>
-    <p>Stötta mitt arbete med sajten och appen — för att fortsätta utveckla <strong>Vision Framtid</strong>, <strong>BAUTA Afrika</strong> och <strong>Fatimah-stödet</strong>.</p>
+    <h1>💖 Stötta arbetet med sajt/app</h1>
+    <p>Stötta mitt arbete, att fortsätta utveckla sajter och appar typ <strong>The Magnus</strong>, <strong>brodrerochsystrar</strong> och <strong>Fatimah-support</strong>.</p>
   </section>
 
+  <!-- Porträtt -->
+  <div class="portrait">
+    <img src="public/magnus-AI-2025.png" alt="Magnus T Gustav Sandberg AI-porträtt">
+  </div>
+
+  <!-- Stödinfo -->
   <main>
     <h2>💳 Banköverföring (Sverige / EU)</h2>
-    <p>Ditt stöd bidrar direkt till utveckling, drift och humanitärt arbete.</p>
+    <p>Ditt stöd bidrar direkt till utveckling och drift av sajterna och appar, din gåva behövs ♥️🙏🏼✝️.</p>
 
     <div class="button-group">
       <button class="btn" onclick="copyBank()">Kopiera bankinfo</button>
@@ -109,6 +158,15 @@
     </p>
   </main>
 
+  <!-- Navigationsknappar -->
+  <div class="nav-links">
+    <a href="index.html" class="nav-btn">Hem</a>
+    <a href="about.html" class="nav-btn">Om mig</a>
+    <a href="services.html" class="nav-btn">Tjänster</a>
+    <a href="contact.html" class="nav-btn">Kontakt</a>
+  </div>
+
+  <!-- Footer -->
   <footer>
     © 2025 Magnus T Gustav Sandberg – Vision Framtid
   </footer>
@@ -140,4 +198,4 @@
     }
   </script>
 </body>
-</html>
+      </html>
