@@ -3,121 +3,153 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support – Magnus T Gustav Sandberg</title>
-  <meta name="description" content="Support the creative and humanitarian work of Magnus T Gustav Sandberg — Vision Framtid, Fatimah Support, and BAUTA projects." />
+  <title>Support My Work – Magnus T Gustav Sandberg</title>
+  <meta name="description" content="Support Magnus T Gustav Sandberg's humanitarian and technical projects — Vision Framtid, BAUTA Africa, and Fatimah Support." />
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #fafafa, #eaeaea);
+      background: #f8f8f8;
       color: #222;
       text-align: center;
       line-height: 1.6;
     }
 
-    main {
+    header {
+      background: linear-gradient(to right, #222, #333);
+      color: white;
       padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
     }
 
-    h1 {
-      color: #222;
-      margin-bottom: 20px;
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #111;
     }
 
     p {
-      margin-bottom: 20px;
-    }
-
-    .support-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      padding: 30px 20px;
-      margin: 30px auto;
-      max-width: 500px;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: #333;
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: bold;
-      transition: background 0.2s;
-      margin: 8px;
-    }
-
-    .btn:hover {
-      background-color: #555;
-    }
-
-    .note {
-      font-style: italic;
       color: #444;
-      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+      text-align: left;
+    }
+
+    .copy-box {
+      background: #222;
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: monospace;
+      font-size: 15px;
+      overflow-wrap: anywhere;
+    }
+
+    .copy-btn {
+      background: #444;
+      border: none;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background: #777;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: white;
-      margin-top: 40px;
+      background: #111;
+      color: #ccc;
+      padding: 30px 20px 40px;
       font-size: 14px;
+      line-height: 1.8;
+    }
+
+    footer p {
+      color: #aaa;
+      max-width: 600px;
+      margin: 10px auto 0;
+      font-size: 15px;
+      font-style: italic;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>💖 Support My Work</h1>
+    <p>Your support helps me continue developing <strong>Vision Framtid</strong>, <strong>BAUTA Africa</strong> and <strong>Fatimah Support</strong> — projects that connect technology with compassion.</p>
+  </header>
 
   <main>
-    <h1>Support My Work</h1>
+    <!-- 🔒 IBAN/BANK (hidden area with copy button) -->
+    <section class="card">
+      <h2>🏦 Direct Bank Support (Sweden / EU)</h2>
+      <p>Your contribution directly supports development, hosting, and humanitarian outreach.</p>
 
-    <p>
-      Your support helps me continue developing humanitarian, technical, and creative projects —
-      from <strong>Vision Framtid</strong> and <strong>BAUTA initiatives in Africa</strong>  
-      to digital care and empowerment platforms like <strong>Fatimah Support</strong>.
-    </p>
+      <div class="copy-box">
+        <span id="iban">IBAN: SE12 3456 7890 1234 5678 9012</span>
+        <button class="copy-btn" onclick="copyIBAN()">Copy</button>
+      </div>
+      <p style="margin-top:10px;">Bank: Handelsbanken • BIC: HANDSESS</p>
+      <p><em>(Swish available for Swedish donors: 072-8502584)</em></p>
+    </section>
 
-    <div class="support-card">
-      <h2>🌍 International Support</h2>
-      <p><strong>Preferred:</strong> via <a href="https://www.worldremit.com/" target="_blank">WorldRemit</a></p>
-      <p>
-        <strong>Receiver name:</strong> Mavis Boakye<br>
-        <strong>Country:</strong> Ghana<br>
-        <strong>Network:</strong> MTN Mobile Money<br>
-        <strong>Number:</strong> +233 594375428
-      </p>
-    </div>
-
-    <div class="support-card">
-      <h2>💳 Direct Bank / Local Support</h2>
-      <p>
-        Swish (Sweden): <strong>072-8502584</strong><br>
-        Please mark your payment with <em>“Support”</em> or your name.
-      </p>
-    </div>
-
-    <p class="note">
-      Every contribution — large or small — makes a real difference.  
-      Thank you for standing with me in this work.
-    </p>
-
-    <div>
-      <a href="about.html" class="btn">About</a>
-      <a href="contact.html" class="btn">Contact</a>
-      <a href="index.html" class="btn">Back</a>
-    </div>
+    <!-- 🌍 International Support -->
+    <section class="card">
+      <h2>🌍 International Support (Africa)</h2>
+      <p>Preferred via <a href="https://www.worldremit.com" target="_blank">WorldRemit</a> for secure transfers.</p>
+      <p><strong>Receiver name:</strong> Mavis Boakye</p>
+      <p><strong>Country:</strong> Ghana</p>
+      <p><strong>Network:</strong> MTN Mobile Money</p>
+      <p><strong>Number:</strong> +233 594375428</p>
+      <p><small>(Used for Fatimah Support — food, care & essentials)</small></p>
+    </section>
   </main>
 
   <footer>
-    © 2025 Magnus T Gustav Sandberg — Kalix, Sweden
+    © 2025 Magnus T Gustav Sandberg — Kalix, Sweden  
+    <p>Every gift, no matter how small, makes a real difference.<br>
+    Thank you for your kindness, compassion, and support.</p>
   </footer>
 
+  <script>
+    function copyIBAN() {
+      const ibanText = document.getElementById("iban").innerText;
+      navigator.clipboard.writeText(ibanText).then(() => {
+        alert("IBAN copied to clipboard!");
+      });
+    }
+  </script>
 </body>
 </html>
