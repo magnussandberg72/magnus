@@ -3,134 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support – Magnus T Gustav Sandberg</title>
-  <meta name="description" content="Webbdesign, AI och framtidsprojekt med hjärta – av Magnus T Gustav Sandberg, Kalix, Sverige.">
+  <title>💖 Stöd mitt arbete</title>
+  <link rel="stylesheet" href="style.css?v=2">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: #f2f5ff;
+      font-family: "Inter", sans-serif;
+      text-align: center;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom right, #f6f6f6, #eaeaea);
-      color: #222;
-      line-height: 1.6;
     }
 
-    header img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .hero {
+      padding: 60px 20px 40px;
+      background: linear-gradient(180deg, #111827 0%, #0b1220 100%);
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 38px);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    .hero p {
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.85);
     }
 
     main {
-      padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
+      background: #f8f9ff;
+      color: #111;
+      border-radius: 16px;
+      margin: 40px 20px;
+      padding: 30px 20px 50px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
 
-    h1 {
-      color: #222;
-      margin-bottom: 15px;
+    h2 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #0b1220;
     }
 
     p {
-      margin-bottom: 15px;
-    }
-
-    .support-info {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      margin-top: 20px;
-      text-align: left;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: #333;
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 6px;
       font-size: 16px;
-      font-weight: bold;
-      transition: background 0.2s;
-      border: none;
-      margin-top: 10px;
-      cursor: pointer;
+      line-height: 1.7;
     }
 
-    .btn:hover {
-      background-color: #555;
-    }
-
-    .nav-buttons {
+    .button-group {
+      margin-top: 25px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 30px;
+      gap: 12px;
     }
 
-    .thankyou {
-      margin-top: 25px;
-      font-style: italic;
-      color: #333;
-      background: rgba(0, 0, 0, 0.05);
-      padding: 12px 16px;
-      border-radius: 8px;
-      display: inline-block;
+    .btn {
+      background: #7aa2ff;
+      color: #06122a;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 26px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #9bb8ff;
+      transform: scale(1.05);
     }
 
     footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #333;
-      color: white;
-      margin-top: 40px;
+      color: #999;
+      font-size: 14px;
+      padding: 30px 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="magnus-irl.jpg" alt="Magnus T Gustav Sandberg" />
-  </header>
+  <section class="hero">
+    <h1>💖 Stöd mitt arbete</h1>
+    <p>Stötta mitt arbete med sajten och appen — för att fortsätta utveckla <strong>Vision Framtid</strong>, <strong>BAUTA Afrika</strong> och <strong>Fatimah-stödet</strong>.</p>
+  </section>
 
   <main>
-    <h1>Support</h1>
-    <p>
-      Tack för att du vill stödja mitt arbete!  
-      All hjälp gör stor skillnad – varje bidrag går till utvecklingen av mina projekt och fortsatt arbete.
+    <h2>💳 Banköverföring (Sverige / EU)</h2>
+    <p>Ditt stöd bidrar direkt till utveckling, drift och humanitärt arbete.</p>
+
+    <div class="button-group">
+      <button class="btn" onclick="copyBank()">Kopiera bankinfo</button>
+      <button class="btn" onclick="openSwish()">💸 Öppna Swish</button>
+      <button class="btn" onclick="copySwish()">Kopiera Swish-nummer</button>
+    </div>
+
+    <p style="margin-top:30px;font-size:14px;color:#444;">
+      Bankuppgifterna visas inte öppet – tryck på knappen ovan för att kopiera dem säkert 👆
     </p>
-
-    <div class="support-info">
-      <p><strong>📱 Swish:</strong> 072-8502584</p>
-      <p><strong>🏦 Bank:</strong> (skickas på begäran via e-post)</p>
-      <p>Märk betalningen med <em>”Stöd”</em> eller ditt namn.</p>
-      <button onclick="copySwish()" class="btn">Kopiera Swish-nummer</button>
-    </div>
-
-    <div class="nav-buttons">
-      <a href="about.html" class="btn">Om mig</a>
-      <a href="services.html" class="btn">Tjänster</a>
-      <a href="contact.html" class="btn">Kontakt</a>
-      <a href="index.html" class="btn">Tillbaka</a>
-    </div>
-
-    <div class="thankyou">
-      ❤️ Tack för ditt stöd – det betyder mycket och gör det möjligt för mig att fortsätta skapa och hjälpa andra.
-    </div>
   </main>
 
   <footer>
-    © 2025 Magnus T Gustav Sandberg – Kalix, Sweden
+    © 2025 Magnus T Gustav Sandberg – Vision Framtid
   </footer>
 
   <script>
+    // 🔒 Dold bankinformation
+    const bankInfo = `
+    Handelsbanken
+    Clearing: 6201
+    Konto: 943 291 011
+    IBAN: SE43 6000 0000 0009 4329 1011
+    BIC: HANDSESS
+    `;
+
+    const swishNumber = "072-8502584";
+
+    function copyBank() {
+      navigator.clipboard.writeText(bankInfo.trim());
+      alert("✅ Bankinformation kopierad");
+    }
+
+    function openSwish() {
+      window.location.href = "swish://";
+    }
+
     function copySwish() {
-      navigator.clipboard.writeText("072-8502584");
-      alert("Swish-nummer kopierat!");
+      navigator.clipboard.writeText(swishNumber);
+      alert("✅ Swish-nummer kopierat");
     }
   </script>
 </body>
