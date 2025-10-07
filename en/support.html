@@ -3,152 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support My Work – Magnus T Gustav Sandberg</title>
-  <meta name="description" content="Support Magnus T Gustav Sandberg's humanitarian and technical projects — Vision Framtid, BAUTA Africa, and Fatimah Support." />
+  <title>💖 Support My Work</title>
+  <link rel="stylesheet" href="style.css?v=2">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f8f8f8;
-      color: #222;
+      background: #0b1220;
+      color: #f2f5ff;
+      font-family: "Inter", sans-serif;
       text-align: center;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(to right, #222, #333);
-      color: white;
-      padding: 40px 20px;
-    }
-
-    header h1 {
       margin: 0;
-      font-size: 26px;
+    }
+
+    .hero {
+      padding: 60px 20px 40px;
+      background: linear-gradient(180deg, #111827 0%, #0b1220 100%);
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 38px);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    .hero p {
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.85);
     }
 
     main {
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
+      background: #f8f9ff;
+      color: #111;
+      border-radius: 16px;
+      margin: 40px 20px;
+      padding: 30px 20px 50px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
 
     h2 {
-      font-size: 22px;
-      margin-bottom: 10px;
-      color: #111;
+      margin-top: 0;
+      font-size: 24px;
+      color: #0b1220;
     }
 
     p {
-      color: #444;
+      font-size: 16px;
+      line-height: 1.7;
     }
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 25px;
-      text-align: left;
-    }
-
-    .copy-box {
-      background: #222;
-      color: #fff;
-      padding: 10px 12px;
-      border-radius: 8px;
+    .button-group {
+      margin-top: 25px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: monospace;
-      font-size: 15px;
-      overflow-wrap: anywhere;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    .copy-btn {
-      background: #444;
+    .btn {
+      background: #7aa2ff;
+      color: #06122a;
+      font-weight: 600;
       border: none;
-      color: #fff;
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 14px;
+      border-radius: 12px;
+      padding: 12px 26px;
       cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
     }
 
-    .copy-btn:hover {
-      background: #777;
+    .btn:hover {
+      background: #9bb8ff;
+      transform: scale(1.05);
     }
 
     footer {
-      background: #111;
-      color: #ccc;
-      padding: 30px 20px 40px;
+      color: #999;
       font-size: 14px;
-      line-height: 1.8;
-    }
-
-    footer p {
-      color: #aaa;
-      max-width: 600px;
-      margin: 10px auto 0;
-      font-size: 15px;
-      font-style: italic;
-    }
-
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      padding: 30px 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
     }
   </style>
 </head>
 <body>
-  <header>
+  <section class="hero">
     <h1>💖 Support My Work</h1>
     <p>Your support helps me continue developing <strong>Vision Framtid</strong>, <strong>BAUTA Africa</strong> and <strong>Fatimah Support</strong> — projects that connect technology with compassion.</p>
-  </header>
+  </section>
 
   <main>
-    <!-- 🔒 IBAN/BANK (hidden area with copy button) -->
-    <section class="card">
-      <h2>🏦 Direct Bank Support (Sweden / EU)</h2>
-      <p>Your contribution directly supports development, hosting, and humanitarian outreach.</p>
+    <h2>💳 Bank Transfer (Sweden / EU)</h2>
+    <p>Your contribution directly supports development, hosting, and humanitarian outreach.</p>
 
-      <div class="copy-box">
-        <span id="iban">IBAN: SE12 3456 7890 1234 5678 9012</span>
-        <button class="copy-btn" onclick="copyIBAN()">Copy</button>
-      </div>
-      <p style="margin-top:10px;">Bank: Handelsbanken • BIC: HANDSESS</p>
-      <p><em>(Swish available for Swedish donors: 072-8502584)</em></p>
-    </section>
+    <div class="button-group">
+      <button class="btn" onclick="copyBank()">Copy Bank Info</button>
+      <button class="btn" onclick="openSwish()">💸 Open Swish</button>
+      <button class="btn" onclick="copySwish()">Copy Swish Number</button>
+    </div>
 
-    <!-- 🌍 International Support -->
-    <section class="card">
-      <h2>🌍 International Support (Africa)</h2>
-      <p>Preferred via <a href="https://www.worldremit.com" target="_blank">WorldRemit</a> for secure transfers.</p>
-      <p><strong>Receiver name:</strong> Mavis Boakye</p>
-      <p><strong>Country:</strong> Ghana</p>
-      <p><strong>Network:</strong> MTN Mobile Money</p>
-      <p><strong>Number:</strong> +233 594375428</p>
-      <p><small>(Used for Fatimah Support — food, care & essentials)</small></p>
-    </section>
+    <p style="margin-top:30px;font-size:14px;color:#444;">
+      Bank info and transfer details are hidden for your safety — use the copy button above 👆
+    </p>
   </main>
 
   <footer>
-    © 2025 Magnus T Gustav Sandberg — Kalix, Sweden  
-    <p>Every gift, no matter how small, makes a real difference.<br>
-    Thank you for your kindness, compassion, and support.</p>
+    © 2025 Magnus T Gustav Sandberg – Vision Framtid
   </footer>
 
   <script>
-    function copyIBAN() {
-      const ibanText = document.getElementById("iban").innerText;
-      navigator.clipboard.writeText(ibanText).then(() => {
-        alert("IBAN copied to clipboard!");
-      });
+    // 🔒 Dold bankinformation
+    const bankInfo = `
+    Handelsbanken
+    Clearing: 6201
+    Account: 943 291 011
+    IBAN: SE43 6000 0000 0009 4329 1011
+    BIC: HANDSESS
+    `;
+
+    const swishNumber = "072-8502584";
+
+    function copyBank() {
+      navigator.clipboard.writeText(bankInfo.trim());
+      alert("✅ Bank details copied to clipboard");
+    }
+
+    function openSwish() {
+      window.location.href = "swish://";
+    }
+
+    function copySwish() {
+      navigator.clipboard.writeText(swishNumber);
+      alert("✅ Swish number copied");
     }
   </script>
 </body>
