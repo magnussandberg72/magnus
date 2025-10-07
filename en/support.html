@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>💖 Support My Work</title>
   <link rel="stylesheet" href="style.css?v=2">
+
   <style>
     body {
       background: #0b1220;
@@ -14,8 +15,9 @@
       margin: 0;
     }
 
+    /* Hero section */
     .hero {
-      padding: 60px 20px 40px;
+      padding: 50px 20px 20px;
       background: linear-gradient(180deg, #111827 0%, #0b1220 100%);
     }
 
@@ -34,11 +36,26 @@
       color: rgba(255,255,255,0.85);
     }
 
+    /* Portrait */
+    .portrait {
+      text-align: center;
+      margin: 30px 0 20px;
+    }
+
+    .portrait img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 25px rgba(255,255,255,0.15);
+    }
+
+    /* Support info box */
     main {
       background: #f8f9ff;
       color: #111;
       border-radius: 16px;
-      margin: 40px 20px;
+      margin: 30px 20px 40px;
       padding: 30px 20px 50px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
@@ -54,6 +71,7 @@
       line-height: 1.7;
     }
 
+    /* Buttons */
     .button-group {
       margin-top: 25px;
       display: flex;
@@ -79,6 +97,32 @@
       transform: scale(1.05);
     }
 
+    /* Navigation links */
+    .nav-links {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #f2f5ff;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255,255,255,0.1);
+      transform: scale(1.05);
+    }
+
     footer {
       color: #999;
       font-size: 14px;
@@ -88,14 +132,21 @@
   </style>
 </head>
 <body>
+  <!-- Hero -->
   <section class="hero">
     <h1>💖 Support My Work</h1>
-    <p>Your support helps me continue developing <strong>Vision Framtid</strong>, <strong>BAUTA Africa</strong> and <strong>Fatimah Support</strong> — projects that connect technology with compassion.</p>
+    <p>Support my work to keep developing sites and apps like <strong>The Magnus</strong>, <strong>Brothers & Sisters</strong> and <strong>Fatimah Support</strong>.</p>
   </section>
 
+  <!-- Portrait -->
+  <div class="portrait">
+    <img src="../public/magnus-AI-2025.png" alt="Magnus T Gustav Sandberg AI Portrait">
+  </div>
+
+  <!-- Support info -->
   <main>
     <h2>💳 Bank Transfer (Sweden / EU)</h2>
-    <p>Your contribution directly supports development, hosting, and humanitarian outreach.</p>
+    <p>Your support directly helps the development, maintenance and charity parts of these projects. Every gift matters ♥️🙏🏼✝️</p>
 
     <div class="button-group">
       <button class="btn" onclick="copyBank()">Copy Bank Info</button>
@@ -104,16 +155,25 @@
     </div>
 
     <p style="margin-top:30px;font-size:14px;color:#444;">
-      Bank info and transfer details are hidden for your safety — use the copy button above 👆
+      Bank details are hidden for security — tap the buttons above to copy them safely 👆
     </p>
   </main>
 
+  <!-- Navigation -->
+  <div class="nav-links">
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="about.html" class="nav-btn">About</a>
+    <a href="services.html" class="nav-btn">Services</a>
+    <a href="contact.html" class="nav-btn">Contact</a>
+  </div>
+
+  <!-- Footer -->
   <footer>
     © 2025 Magnus T Gustav Sandberg – Vision Framtid
   </footer>
 
   <script>
-    // 🔒 Dold bankinformation
+    // 🔒 Hidden bank info
     const bankInfo = `
     Handelsbanken
     Clearing: 6201
@@ -126,7 +186,7 @@
 
     function copyBank() {
       navigator.clipboard.writeText(bankInfo.trim());
-      alert("✅ Bank details copied to clipboard");
+      alert("✅ Bank information copied");
     }
 
     function openSwish() {
