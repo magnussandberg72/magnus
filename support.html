@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stöd mitt arbete – Magnus T Gustav Sandberg</title>
+  <title>💖 Stöd mitt arbete – Magnus T Gustav Sandberg</title>
   <style>
     body {
       margin: 0;
@@ -71,6 +71,7 @@
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
+      margin: 6px;
       transition: background 0.3s;
     }
 
@@ -78,10 +79,21 @@
       background: #125ac6;
     }
 
+    .hidden {
+      display: none;
+      margin-top: 12px;
+      background: #222;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 15px;
+      color: #fff;
+      word-wrap: break-word;
+    }
+
     footer {
       color: #aaa;
       font-size: 14px;
-      padding: 20px;
+      padding: 30px 20px;
       background: #0d0f13;
     }
   </style>
@@ -97,15 +109,58 @@
     <img src="./public/magnus-alven.jpg" alt="Magnus T Gustav Sandberg porträtt">
   </div>
 
+  <!-- BANK -->
   <section>
     <h2>🏦 Bank överföring</h2>
     <p>Ditt stöd bidrar direkt till utveckling och drift av sajterna och apparna – din gåva behövs ❤️🙏🏼</p>
-    <a href="#" class="btn">Kopiera bankinfo</a>
+    <a href="#" class="btn" onclick="toggleBank()">Visa bankinfo</a>
+    <div id="bankinfo" class="hidden">
+      <p><strong>Bank:</strong> Handelsbanken</p>
+      <p><strong>Clearingnummer:</strong> 6201</p>
+      <p><strong>Kontonummer:</strong> 943 291 011</p>
+      <p><strong>IBAN:</strong> SE43 6000 0000 0009 4329 1011</p>
+      <p><strong>BIC/SWIFT:</strong> HANDSESS</p>
+      <a href="#" class="btn" onclick="copyBank()">📋 Kopiera bankinfo</a>
+    </div>
+  </section>
+
+  <!-- SWISH -->
+  <section>
+    <h2>📱 Swish</h2>
+    <p>Vill du stötta snabbt och enkelt?  
+    Tryck på knappen nedan för att öppna Swish-appen 💚</p>
+    <a href="swish://payment?phone=0728502584&message=The%20Magnus" class="btn">💚 Öppna Swish</a>
+    <a href="#" class="btn" onclick="copySwish()">📋 Kopiera Swishnummer</a>
   </section>
 
   <footer>
-    © 2025 Magnus T Gustav Sandberg — Kalix, Sverige
+    © 2025 Magnus T Gustav Sandberg — Kalix, Sverige  
+    <br><br>
+    <a href="index.html" class="btn">⬅️ Tillbaka hem</a>
   </footer>
+
+  <script>
+    function toggleBank() {
+      const box = document.getElementById('bankinfo');
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function copyBank() {
+      const info = `Bank: Handelsbanken
+Clearing: 6201
+Konto: 943 291 011
+IBAN: SE43 6000 0000 0009 4329 1011
+BIC: HANDSESS`;
+      navigator.clipboard.writeText(info);
+      alert("✅ Bankinfo kopierad till urklipp!");
+    }
+
+    function copySwish() {
+      const swish = "0728502584";
+      navigator.clipboard.writeText(swish);
+      alert("✅ Swishnummer kopierat till urklipp!");
+    }
+  </script>
 
 </body>
 </html>
