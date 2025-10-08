@@ -1,161 +1,160 @@
-/* ===========================
-   Magnus Svenska Sajt – v2 Stil
-   =========================== */
+/* ===============================
+   🌙 Vision Framtid – Svensk sajt
+   Enhetlig mörk design + knappar
+   =============================== */
 
-/* 🎨 FÄRGER & GRUNDVARIABLER */
 :root {
-  --bg-dark: #0b1423;
-  --bg-gradient: linear-gradient(180deg, #0b1423 0%, #1a2b4d 100%);
-  --text: #f7f9ff;
-  --muted: #c2cff2;
-  --accent: #8aaaff;
-  --btn-bg: #8aaaff;
-  --btn-hover: #a7bfff;
-  --btn-text: #06122a;
+  --bg-dark: #0b1220;
+  --text-light: #f2f5ff;
+  --accent: #7aa2ff;
+  --btn-bg: #2a2e39;
+  --btn-bg-hover: #3a3f4d;
+  --btn-text: #ffffff;
 }
 
-/* 🩶 GRUNDSTIL */
+/* 🖤 Grundlayout */
 body {
   margin: 0;
   font-family: "Inter", system-ui, sans-serif;
-  background: var(--bg-gradient);
-  color: var(--text);
-  line-height: 1.8;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.7;
+  text-align: center;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  text-align: center;
-  overflow-x: hidden;
 }
 
-main {
-  flex: 1;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 24px 60px;
-}
-
-/* 🏷️ RUBRIKER */
+/* Rubriker */
 h1, h2, h3 {
-  color: var(--text);
-  margin: 0 0 20px;
-  font-weight: 500;
+  font-weight: 700;
+  color: var(--text-light);
+  margin: 20px 0 10px;
 }
 
-h1 {
-  font-size: clamp(26px, 5vw, 42px);
-  margin-top: 40px;
-}
-
-h2 {
-  font-size: clamp(22px, 4vw, 30px);
-  color: #e0e8ff;
-}
-
-/* ✍️ BRÖDTEXT */
+/* Stycke-text */
 p {
-  margin: 14px 0;
-  color: var(--text);
+  max-width: 720px;
+  margin: 10px auto;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
 }
 
-p.small {
-  color: var(--muted);
-  font-size: 14px;
+/* Kort / sektioner */
+main {
+  max-width: 900px;
+  margin: 20px auto 60px;
+  padding: 30px 20px;
+  background: #1a1f2d;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* 🔘 KNAPPAR */
-a.button,
-button {
-  display: inline-block;
+/* 🪄 Porträtt */
+.portrait {
+  text-align: center;
+  margin: 30px 0 10px;
+}
+.portrait img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* ===============================
+   🔘 Enhetlig knappstil
+   =============================== */
+button,
+a.btn,
+a.nav-btn,
+.main-btn {
   background: var(--btn-bg);
   color: var(--btn-text);
-  padding: 14px 28px;
-  border-radius: 14px;
-  font-weight: 700;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 26px;
+  cursor: pointer;
   font-size: 16px;
   text-decoration: none;
-  margin: 18px 8px;
-  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-  box-shadow: 0 4px 15px rgba(138,170,255,0.25);
-  border: none;
-  cursor: pointer;
+  display: inline-block;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-a.button:hover,
-button:hover {
-  background: var(--btn-hover);
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(138,170,255,0.4);
+/* Hover-effekt */
+button:hover,
+a.btn:hover,
+a.nav-btn:hover,
+.main-btn:hover {
+  background: var(--btn-bg-hover);
+  transform: scale(1.04);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
 }
 
-/* 💬 CITAT */
-.quote {
-  font-style: italic;
-  color: var(--muted);
-  margin: 30px 0;
+/* Marginaler mellan knappar i grupper */
+.nav-links a,
+.button-group button {
+  margin: 6px 0;
 }
 
-/* 📦 KORT / SEKTIONER */
-.card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-  padding: 24px;
-  margin: 20px 0;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+/* ===============================
+   🧭 Navigering & Footer
+   =============================== */
+.nav-links {
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-/* 📸 BILDER */
-img.responsive {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto;
-}
-
-/* 🧭 FOOTER */
 footer {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
   text-align: center;
-  padding: 30px 20px 40px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  background: #0a1120;
+  padding: 40px 20px 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
 }
 
-footer a {
-  color: var(--accent);
-  text-decoration: none;
-  margin: 0 8px;
-  font-weight: 500;
+/* ===============================
+   📸 Bildkort (ex. BAUTA)
+   =============================== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 900px;
 }
 
-footer a:hover {
-  text-decoration: underline;
+.project-card {
+  background: #1c2333;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
-/* 🪄 FADE / ÖVERGÅNGAR */
-.fade {
-  position: relative;
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.project-card img {
   width: 100%;
-  height: 160px;
-  background: linear-gradient(to bottom, rgba(11,18,32,0) 0%, #0b1423 100%);
-  margin-top: -160px;
+  height: 150px;
+  object-fit: cover;
 }
-
-/* 📱 MOBILANPASSNING */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 28px;
-    margin-top: 24px;
-  }
-
-  main {
-    padding: 30px 18px 60px;
-  }
-
-  a.button,
-  button {
-    width: 85%;
-    margin: 12px auto;
-  }
+.project-card h3 {
+  margin: 10px 0;
+  color: #9bb8ff;
+}
+.project-card p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0 10px 20px;
 }
