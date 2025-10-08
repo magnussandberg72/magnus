@@ -1,194 +1,111 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>💖 Stöd mitt arbete</title>
-  <link rel="stylesheet" href="style.css?v=2" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stöd mitt arbete – Magnus T Gustav Sandberg</title>
   <style>
     body {
-      background: #0b1220;
-      color: #f2f5ff;
-      font-family: "Inter", sans-serif;
-      text-align: center;
       margin: 0;
-      line-height: 1.7;
+      font-family: system-ui, sans-serif;
+      background: #0f1115;
+      color: #f5f5f5;
+      line-height: 1.6;
+      text-align: center;
     }
 
     header {
-      padding: 60px 20px 20px;
+      padding: 60px 20px 30px;
+      background: linear-gradient(to bottom, #1b1d23, #0f1115);
     }
 
     header h1 {
-      font-size: clamp(28px, 5vw, 38px);
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 12px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      font-size: 26px;
+      margin-bottom: 10px;
     }
 
     header p {
-      max-width: 640px;
+      color: #ccc;
+      font-size: 16px;
+      max-width: 600px;
       margin: 0 auto;
-      color: rgba(255,255,255,0.9);
     }
 
     .portrait {
-      margin: 25px 0 20px;
+      margin: 35px 0;
     }
 
     .portrait img {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 0 25px rgba(255,255,255,0.2);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
     }
 
-    main {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 20px 25px 80px;
+    section {
+      background: #111;
+      border-radius: 18px;
+      margin: 0 auto 40px;
+      max-width: 650px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
     }
 
-    h2 {
-      color: #7aa2ff;
-      margin-top: 40px;
-      font-size: 24px;
-    }
-
-    p {
-      color: rgba(255,255,255,0.88);
-      font-size: 16px;
-    }
-
-    .emoji-line {
+    section h2 {
+      color: #9ad0ff;
       font-size: 22px;
-      margin: 18px 0;
+      margin-bottom: 10px;
     }
 
-    .button-group {
-      margin-top: 25px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
+    section p {
+      color: #ddd;
+      margin-bottom: 20px;
     }
 
     .btn {
-      background: #7aa2ff;
-      color: #06122a;
-      font-weight: 600;
-      border: none;
-      border-radius: 12px;
-      padding: 12px 26px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+      display: inline-block;
+      background: #1a73e8;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
     }
 
     .btn:hover {
-      background: #9bb8ff;
-      transform: scale(1.05);
-    }
-
-    .nav-links {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .nav-btn {
-      background: #7aa2ff;
-      color: #06122a;
-      text-decoration: none;
-      padding: 10px 22px;
-      border-radius: 10px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .nav-btn:hover {
-      background: #9bb8ff;
-      transform: scale(1.05);
+      background: #125ac6;
     }
 
     footer {
-      color: #999;
+      color: #aaa;
       font-size: 14px;
-      padding: 30px 20px;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;
+      background: #0d0f13;
     }
   </style>
 </head>
-
 <body>
+
   <header>
     <h1>💖 Stöd mitt arbete</h1>
-    <p>Stötta mitt arbete med sajterna och apparna — din gåva gör skillnad och hjälper till att driva utvecklingen framåt.</p>
+    <p>Stötta mitt arbete med sajterna och apparna – din gåva gör skillnad och hjälper till att driva utvecklingen framåt.</p>
   </header>
 
   <div class="portrait">
-    <img src="public/magnus-AI-2025.png" alt="Magnus T Gustav Sandberg porträtt">
+    <img src="./public/magnus-alven.jpg" alt="Magnus T Gustav Sandberg porträtt">
   </div>
 
-  <main>
-    <h2>🏦 Banköverföring (Sverige / EU)</h2>
-    <p>Ditt stöd bidrar direkt till utveckling och drift av sajterna och apparna – din gåva behövs ❤️🙏🏼✝️</p>
-
-    <div class="emoji-line">💖🙏🏼✝️</div>
-
-    <div class="button-group">
-      <button class="btn" onclick="copyBank()">Kopiera bankinfo</button>
-      <button class="btn" onclick="openSwish()">💸 Öppna Swish</button>
-      <button class="btn" onclick="copySwish()">Kopiera Swish-nummer</button>
-    </div>
-
-    <p style="margin-top:30px;font-size:14px;color:#bbb;">
-      Bankuppgifterna visas inte öppet – tryck på knappen ovan för att kopiera dem säkert 👆
-    </p>
-
-    <div class="nav-links">
-      <a href="index.html" class="nav-btn">Hem</a>
-      <a href="about.html" class="nav-btn">Om mig</a>
-      <a href="services.html" class="nav-btn">Tjänster</a>
-      <a href="contact.html" class="nav-btn">Kontakt</a>
-    </div>
-  </main>
+  <section>
+    <h2>🏦 Bank överföring</h2>
+    <p>Ditt stöd bidrar direkt till utveckling och drift av sajterna och apparna – din gåva behövs ❤️🙏🏼</p>
+    <a href="#" class="btn">Kopiera bankinfo</a>
+  </section>
 
   <footer>
-    © 2025 Magnus T Gustav Sandberg – Vision Framtid
+    © 2025 Magnus T Gustav Sandberg — Kalix, Sverige
   </footer>
 
-  <script>
-    // 🔒 Dold bankinformation
-    const bankInfo = `
-    Handelsbanken
-    Clearing: 6201
-    Konto: 943 291 011
-    IBAN: SE43 6000 0000 0009 4329 1011
-    BIC: HANDSESS
-    `;
-
-    const swishNumber = "072-8502584";
-
-    function copyBank() {
-      navigator.clipboard.writeText(bankInfo.trim());
-      alert("✅ Bankinformation kopierad");
-    }
-
-    function openSwish() {
-      window.location.href = "swish://";
-    }
-
-    function copySwish() {
-      navigator.clipboard.writeText(swishNumber);
-      alert("✅ Swish-nummer kopierat");
-    }
-  </script>
 </body>
 </html>
