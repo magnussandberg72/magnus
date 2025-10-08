@@ -1,20 +1,22 @@
 <section class="support">
-  <h1>💖 Stöd mitt arbete</h1>
+  <h1>💖 Stötta sajterna 🙏🏼</h1>
   <p>Stötta mitt arbete med sajterna och apparna — din gåva är värdefull för mig, och hjälper till att driva utvecklingen framåt.</p>
 
   <img src="./public/magnus-alven.png" alt="Magnus T Gustav Sandberg porträtt" class="portrait">
 
   <div class="bank-section">
     <h2>🏦 Bank överföring</h2>
-    <p>Ditt stöd bidrar till utveckling och drift av sajterna och apparna – din gåva är värdefull ❤️🙏✝️</p>
+    <p>Ditt stöd bidrar till utveckling och drift av sajterna och apparna – gåvan är värdefull ❤️🙏✝️</p>
     <button onclick="copyBankInfo()">Visa bankinfo</button>
   </div>
 
   <div class="swish-section">
     <h2>📱 Swish</h2>
-    <p>Vill du stötta enkelt? Tryck på swishknappen nedan för att öppna Swish-appen 💚</p>
-    <button onclick="openSwish()">💚 Öppna Swish</button>
-    <button onclick="copySwish()">📋 Kopiera Swishnummer</button>
+    <p>Vill du stötta enkelt? Tryck på swishknappen här nedan för att öppna Swish-appen 💚</p>
+    <div class="btn-row">
+      <button onclick="openSwish()">💚 Öppna Swish</button>
+      <button onclick="copySwish()">📋 Kopiera Swishnummer</button>
+    </div>
   </div>
 
   <footer>
@@ -34,37 +36,38 @@
   }
 
   .support {
-    padding: 40px 20px;
+    padding: 40px 20px 70px;
   }
 
   .portrait {
-    width: 200px;
-    border-radius: 50%;
-    margin: 20px auto;
+    width: 260px;
+    height: auto;
+    border-radius: 1000px;
+    margin: 25px auto;
     display: block;
-    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    box-shadow: 0 0 35px rgba(255,255,255,0.15);
   }
 
   .bank-section, .swish-section {
     background: #1a1a1a;
-    border-radius: 12px;
-    padding: 25px;
-    margin: 30px auto;
+    border-radius: 20px;
+    padding: 30px 25px;
+    margin: 35px auto;
     max-width: 500px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.45);
   }
 
   button {
     background-color: #3a3a3a;
     color: white;
-    padding: 12px 24px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    margin: 8px;
+    border-radius: 14px;
+    font-size: 17px;
+    margin: 10px 6px;
     cursor: pointer;
     font-weight: 600;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
     transition: all 0.3s ease;
   }
 
@@ -73,16 +76,24 @@
     transform: translateY(-2px);
   }
 
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
   .back-btn {
     display: inline-block;
     background-color: #2a2a2a;
     color: white;
     text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 10px;
+    padding: 15px 28px;
+    border-radius: 14px;
     font-weight: 600;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
-    margin-top: 20px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    margin-top: 30px;
+    font-size: 16px;
   }
 
   .back-btn:hover {
