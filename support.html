@@ -1,166 +1,114 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>💖 Stöd mitt arbete – Magnus T Gustav Sandberg</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background: #0f1115;
-      color: #f5f5f5;
-      line-height: 1.6;
-      text-align: center;
-    }
+<section class="support">
+  <h1>💖 Stöd mitt arbete</h1>
+  <p>Stötta mitt arbete med sajterna och apparna — din gåva är värdefull för mig, och hjälper till att driva utvecklingen framåt.</p>
 
-    header {
-      padding: 60px 20px 30px;
-      background: linear-gradient(to bottom, #1b1d23, #0f1115);
-    }
+  <img src="public/magnus-alven.jpg" alt="Magnus T Gustav Sandberg porträtt" class="portrait">
 
-    header h1 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      color: #ccc;
-      font-size: 16px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .portrait {
-      margin: 35px 0;
-    }
-
-    .portrait img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-    }
-
-    section {
-      background: #111;
-      border-radius: 18px;
-      margin: 0 auto 40px;
-      max-width: 650px;
-      padding: 30px 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-    }
-
-    section h2 {
-      color: #9ad0ff;
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    section p {
-      color: #ddd;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #1a73e8;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 6px;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: #125ac6;
-    }
-
-    .hidden {
-      display: none;
-      margin-top: 12px;
-      background: #222;
-      padding: 14px;
-      border-radius: 10px;
-      font-size: 15px;
-      color: #fff;
-      word-wrap: break-word;
-    }
-
-    footer {
-      color: #aaa;
-      font-size: 14px;
-      padding: 30px 20px;
-      background: #0d0f13;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>💖 Stöd mitt arbete</h1>
-    <p>Stötta mitt arbete med sajterna och apparna – din gåva gör skillnad och hjälper till att driva utvecklingen framåt.</p>
-  </header>
-
-  <div class="portrait">
-    <img src="./public/magnus-alven.jpg" alt="Magnus T Gustav Sandberg porträtt">
+  <div class="bank-section">
+    <h2>🏦 Bank överföring</h2>
+    <p>Ditt stöd bidrar direkt till utveckling och drift av sajterna och apparna – din gåva behövs ❤️🙏✝️</p>
+    <button onclick="copyBankInfo()">Visa bankinfo</button>
   </div>
 
-  <!-- BANK -->
-  <section>
-    <h2>🏦 Bank överföring</h2>
-    <p>Ditt stöd bidrar direkt till utveckling och drift av sajterna och apparna – din gåva behövs ❤️🙏🏼</p>
-    <a href="#" class="btn" onclick="toggleBank()">Visa bankinfo</a>
-    <div id="bankinfo" class="hidden">
-      <p><strong>Bank:</strong> Handelsbanken</p>
-      <p><strong>Clearingnummer:</strong> 6201</p>
-      <p><strong>Kontonummer:</strong> 943 291 011</p>
-      <p><strong>IBAN:</strong> SE43 6000 0000 0009 4329 1011</p>
-      <p><strong>BIC/SWIFT:</strong> HANDSESS</p>
-      <a href="#" class="btn" onclick="copyBank()">📋 Kopiera bankinfo</a>
-    </div>
-  </section>
-
-  <!-- SWISH -->
-  <section>
+  <div class="swish-section">
     <h2>📱 Swish</h2>
-    <p>Vill du stötta snabbt och enkelt?  
-    Tryck på knappen nedan för att öppna Swish-appen 💚</p>
-    <a href="swish://payment?phone=0728502584&message=The%20Magnus" class="btn">💚 Öppna Swish</a>
-    <a href="#" class="btn" onclick="copySwish()">📋 Kopiera Swishnummer</a>
-  </section>
+    <p>Vill du stötta snabbt och enkelt? Tryck på knappen nedan för att öppna Swish-appen 💚</p>
+    <button onclick="openSwish()">💚 Öppna Swish</button>
+    <button onclick="copySwish()">📋 Kopiera Swishnummer</button>
+  </div>
 
   <footer>
-    © 2025 Magnus T Gustav Sandberg — Kalix, Sverige  
-    <br><br>
-    <a href="index.html" class="btn">⬅️ Tillbaka hem</a>
+    <p>© 2025 Magnus T Gustav Sandberg — Kalix, Sverige</p>
+    <a href="index.html" class="back-btn">⬅️ Tillbaka hem</a>
   </footer>
+</section>
 
-  <script>
-    function toggleBank() {
-      const box = document.getElementById('bankinfo');
-      box.style.display = box.style.display === 'block' ? 'none' : 'block';
-    }
+<style>
+  body {
+    background-color: #0f0f0f;
+    color: #f0f0f0;
+    font-family: system-ui, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
 
-    function copyBank() {
-      const info = `Bank: Handelsbanken
-Clearing: 6201
-Konto: 943 291 011
+  .support {
+    padding: 40px 20px;
+  }
+
+  .portrait {
+    width: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  }
+
+  .bank-section, .swish-section {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 500px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  }
+
+  button {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #505050;
+    transform: translateY(-2px);
+  }
+
+  .back-btn {
+    display: inline-block;
+    background-color: #2a2a2a;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    margin-top: 20px;
+  }
+
+  .back-btn:hover {
+    background-color: #3a3a3a;
+    transform: translateY(-2px);
+  }
+</style>
+
+<script>
+  function copyBankInfo() {
+    const bankInfo = `🏦 Handelsbanken
+BIC: HANDSESS
 IBAN: SE43 6000 0000 0009 4329 1011
-BIC: HANDSESS`;
-      navigator.clipboard.writeText(info);
-      alert("✅ Bankinfo kopierad till urklipp!");
-    }
+Konto: 943 291 011
+Clearing: 6201`;
+    navigator.clipboard.writeText(bankInfo);
+    alert("Bankuppgifterna har kopierats ✅");
+  }
 
-    function copySwish() {
-      const swish = "0728502584";
-      navigator.clipboard.writeText(swish);
-      alert("✅ Swishnummer kopierat till urklipp!");
-    }
-  </script>
+  function openSwish() {
+    window.location.href = "swish://";
+  }
 
-</body>
-</html>
+  function copySwish() {
+    const swishNumber = "0728502584";
+    navigator.clipboard.writeText(swishNumber);
+    alert("Swishnumret har kopierats ✅");
+  }
+</script>
