@@ -4,146 +4,104 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontakt – Magnus T Gustav Sandberg</title>
-  <meta name="description" content="Webbdesign, AI och framtidsprojekt med hjärta – av Magnus T Gustav Sandberg, Kalix, Sverige.">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom right, #f6f6f6, #eaeaea);
-      color: #222;
-      line-height: 1.6;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #0b0b0b;
+      color: #f2f2f2;
+      text-align: center;
+    }
+
+    header {
+      padding: 2rem 1rem 1rem;
     }
 
     header img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    main {
-      padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
+      width: 180px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
     }
 
     h1 {
-      text-align: left;
-      margin-bottom: 10px;
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
     }
 
     p {
-      margin-bottom: 10px;
+      margin: 0.5rem auto;
+      max-width: 600px;
+      line-height: 1.6;
     }
 
-    strong {
-      color: #111;
+    .contact-info {
+      margin: 1.5rem 0;
+      font-size: 1.1rem;
     }
 
-    form {
-      margin-top: 20px;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
     }
 
-    label {
-      display: block;
-      font-weight: bold;
-      margin-top: 15px;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 15px;
-    }
-
-    textarea {
-      resize: vertical;
-      height: 120px;
-    }
-
-    .btn {
-      display: inline-block;
+    button, a.button {
       background-color: #333;
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: bold;
-      transition: background 0.2s;
+      color: #fff;
       border: none;
-      margin-top: 15px;
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      font-weight: 600;
       cursor: pointer;
+      text-decoration: none;
+      transition: 0.2s;
     }
 
-    .btn:hover {
+    button:hover, a.button:hover {
       background-color: #555;
     }
 
-    .nav-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 30px;
-    }
-
     footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #333;
-      color: white;
-      margin-top: 40px;
+      background-color: #111;
+      color: #ccc;
+      padding: 1.5rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="magnus-irl.jpg" alt="Magnus T Gustav Sandberg" />
+    <img src="./public/magnus-irl.jpg" alt="Magnus T Gustav Sandberg" />
+    <h1>Kontakt</h1>
+    <p>Du kan kontakta mig för uppdrag, samarbeten eller frågor.<br>Jag svarar så snart jag kan.</p>
   </header>
 
-  <main>
-    <h1>Kontakt</h1>
-    <p>
-      Du kan kontakta mig för uppdrag, samarbeten eller frågor. Jag svarar så snart jag kan.
-    </p>
+  <section class="contact-info">
+    <p><strong>E-post:</strong> magnus.lulea@proton.me</p>
+    <p><strong>Telefon:</strong> 072-8502584</p>
+  </section>
 
-    <p>
-      <strong>E-post:</strong> magnus.lulea@proton.me<br />
-      <strong>Telefon:</strong> 072-8502584
-    </p>
-
-    <form action="mailto:magnus.lulea@proton.me" method="post" enctype="text/plain">
-      <label for="name">Namn</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Din e-post</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Meddelande</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit" class="btn">Skicka meddelande</button>
-    </form>
-
-    <div class="nav-buttons">
-      <a href="about.html" class="btn">Om mig</a>
-      <a href="support.html" class="btn">Support</a>
-      <a href="services.html" class="btn">Tjänster</a>
-      <a href="index.html" class="btn">Tillbaka</a>
-    </div>
-  </main>
+  <div class="buttons">
+    <a href="mailto:magnus.lulea@proton.me" class="button">📧 Skicka e-post</a>
+    <button onclick="copyPhone()">📋 Kopiera telefonnummer</button>
+  </div>
 
   <footer>
-    © 2025 Magnus T Gustav Sandberg – Kalix, Sweden
+    © 2025 Magnus T Gustav Sandberg — Kalix, Sverige
   </footer>
+
+  <script>
+    function copyPhone() {
+      navigator.clipboard.writeText("0728502584");
+      alert("Telefonnummer kopierat!");
+    }
+  </script>
+
 </body>
 </html>
