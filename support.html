@@ -1,130 +1,166 @@
-<section class="support">
-  <h1>💖 Stötta sajterna 🙏🏼</h1>
-  <p>Stötta mitt arbete med sajterna och apparna — din gåva är värdefull för mig, och hjälper till att driva utvecklingen framåt.</p>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stötta Magnus T Gustav Sandberg – hjälp utveckla sidor och appar inom Vision Framtid." />
+  <title>Stötta sajterna – Magnus T Gustav Sandberg</title>
+  <style>
+    body {
+      background: linear-gradient(180deg, #0d0f14 0%, #131722 100%);
+      color: #f5f5f5;
+      font-family: system-ui, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
 
-  <img src="./public/magnus-alven.png" alt="Magnus T Gustav Sandberg porträtt" class="portrait">
+    section {
+      padding: 40px 20px 80px;
+    }
 
-  <div class="bank-section">
-    <h2>🏦 Bank överföring</h2>
-    <p>Ditt stöd bidrar till utveckling och drift av sajterna och apparna – din gåva är värdefull ❤️🙏✝️</p>
-    <button class="wide-btn" onclick="copyBankInfo()">Visa bankinfo</button>
-  </div>
+    h1 {
+      font-size: 2.2em;
+      color: #d2dbff;
+      margin-bottom: 15px;
+    }
 
-  <div class="swish-section">
-    <h2>📱 Swish</h2>
-    <p>Vill du stötta enkelt? Tryck på swishknappen här nedan för att öppna Swish-appen 💚</p>
-    <div class="btn-row">
-      <button class="wide-btn" onclick="openSwish()">💚 Öppna Swish</button>
-      <button class="wide-btn" onclick="copySwish()">📋 Kopiera Swishnummer</button>
+    p {
+      font-size: 1.2em;
+      line-height: 1.7;
+      max-width: 720px;
+      margin: 0 auto 28px;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 30px auto;
+      display: block;
+      box-shadow: 0 0 40px rgba(255, 215, 160, 0.3);
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 18px;
+      padding: 30px 20px 40px;
+      max-width: 650px;
+      margin: 35px auto;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+    }
+
+    .card h2 {
+      font-size: 1.5em;
+      color: #bcd4ff;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 1.1em;
+      margin-bottom: 28px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .btn {
+      display: block;
+      width: 90%;
+      max-width: 380px;
+      background-color: #333;
+      color: #fff;
+      padding: 20px 22px;
+      border-radius: 14px;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.45);
+      transition: all 0.25s ease;
+    }
+
+    .btn:hover {
+      background-color: #444;
+      transform: translateY(-2px);
+    }
+
+    footer p {
+      margin-top: 65px;
+      font-size: 1em;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      p { font-size: 1.15em; }
+      .btn { font-size: 17.5px; padding: 18px 20px; }
+      img { width: 180px; height: 180px; }
+      .card { margin: 25px 15px; padding: 25px 15px 35px; }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>💖 Stötta sajterna 🙏🏼</h1>
+    <p>
+      Stötta mitt arbete med sajterna och apparna —  
+      din gåva är värdefull för mig och hjälper till att driva utvecklingen framåt.
+    </p>
+
+    <img src="./public/magnus-alven.png" alt="Magnus T Gustav Sandberg">
+
+    <!-- Bank -->
+    <div class="card">
+      <h2>🏦 Banköverföring</h2>
+      <p>
+        Ditt stöd bidrar till utveckling, drift och välgörenhetsprojekten.<br>
+        Varje krona gör skillnad ❤️🙏🏼✝️
+      </p>
+      <div class="button-group">
+        <a href="#" class="btn" onclick="copyBankInfo()">📋 Kopiera bankuppgifter</a>
+      </div>
     </div>
-  </div>
 
-  <footer>
-    <p>© 2025 Magnus T Gustav Sandberg — Kalix, Sverige</p>
-    <a href="index.html" class="wide-btn">⬅️ Tillbaka hem</a>
-  </footer>
-</section>
+    <!-- Swish -->
+    <div class="card">
+      <h2>📱 Swish</h2>
+      <p>
+        Vill du stötta enkelt? Tryck på knappen nedan för att öppna Swish 💚
+      </p>
+      <div class="button-group">
+        <a href="swish://" class="btn">💚 Öppna Swish</a>
+        <a href="#" class="btn" onclick="copySwish()">📋 Kopiera Swishnummer</a>
+      </div>
+    </div>
 
-<style>
-  body {
-    background-color: #0f0f0f;
-    color: #f0f0f0;
-    font-family: system-ui, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
+    <!-- Back -->
+    <div class="button-group" style="margin-top: 40px;">
+      <a href="index.html" class="btn">⬅️ Tillbaka hem</a>
+    </div>
 
-  .support {
-    padding: 40px 20px 70px;
-  }
+    <footer>
+      <p>© 2025 Magnus T Gustav Sandberg — Kalix, Sverige</p>
+    </footer>
+  </section>
 
-  h1 {
-    font-size: 1.9em;
-    margin-bottom: 10px;
-  }
+  <script>
+    function copyBankInfo() {
+      const bankInfo = "Handelsbanken\nIBAN: SE43 6000 0000 0009 4329 1011\nBIC: HANDSESS\nKonto: 943 291 011\nClearing: 6201";
+      navigator.clipboard.writeText(bankInfo);
+      alert("✅ Bankuppgifter kopierade!");
+    }
 
-  p {
-    line-height: 1.6;
-    font-size: 1.05em;
-  }
-
-  .portrait {
-    width: 260px;
-    height: auto;
-    border-radius: 1000px;
-    margin: 30px auto;
-    display: block;
-    box-shadow: 0 0 40px rgba(255, 200, 160, 0.2);
-  }
-
-  .bank-section, .swish-section {
-    background: #1a1a1a;
-    border-radius: 18px;
-    padding: 30px 25px;
-    margin: 35px auto;
-    max-width: 500px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.45);
-  }
-
-  h2 {
-    color: #bcd4ff;
-  }
-
-  .wide-btn {
-    display: block;
-    width: 90%;
-    max-width: 340px;
-    background-color: #333;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    border-radius: 14px;
-    font-size: 17px;
-    margin: 14px auto;
-    cursor: pointer;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    transition: all 0.25s ease;
-  }
-
-  .wide-btn:hover {
-    background-color: #444;
-    transform: translateY(-2px);
-  }
-
-  .btn-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  footer p {
-    margin-top: 40px;
-    font-size: 0.9em;
-    color: #ccc;
-  }
-</style>
-
-<script>
-  function copyBankInfo() {
-    const bankInfo = `🏦 Handelsbanken
-BIC: HANDSESS
-IBAN: SE43 6000 0000 0009 4329 1011
-Konto: 943 291 011
-Clearing: 6201`;
-    navigator.clipboard.writeText(bankInfo);
-    alert("Bankuppgifterna har kopierats ✅");
-  }
-
-  function openSwish() {
-    window.location.href = "swish://";
-  }
-
-  function copySwish() {
-    const swishNumber = "0728502584";
-    navigator.clipboard.writeText(swishNumber);
-    alert("Swishnumret har kopierats ✅");
-  }
-</script>
+    function copySwish() {
+      const swishNumber = "072-8502584";
+      navigator.clipboard.writeText(swishNumber);
+      alert("✅ Swishnummer kopierat!");
+    }
+  </script>
+</body>
+</html>
