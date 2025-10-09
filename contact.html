@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontakt – Magnus T Gustav Sandberg</title>
+  <meta name="description" content="Kontakta Magnus T Gustav Sandberg – konsult, visionär och AI-utvecklare i Kalix. Samarbeten, projektidéer eller uppdrag.">
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -54,6 +55,27 @@
     .btn:hover, button.btn:hover {
       background-color: #444;
     }
+    .nav-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .nav-row a {
+      background-color: #333;
+      color: #fff;
+      font-weight: bold;
+      padding: 14px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      transition: background-color 0.2s;
+    }
+    .nav-row a:hover {
+      background-color: #444;
+    }
     footer {
       background-color: #111;
       color: #ccc;
@@ -65,23 +87,26 @@
 </head>
 <body>
 
-  <img src="./public/magnus-irl.jpg" alt="Magnus T Gustav Sandberg">
+  <img src="./public/magnus-irl.jpg" alt="Magnus T Gustav Sandberg" />
 
   <h1>Kontakt</h1>
-  <p>Du kan kontakta mig för uppdrag, samarbeten eller frågor.<br>Jag svarar så snart jag kan.</p>
+  <p>Du kan kontakta mig för uppdrag, samarbeten eller frågor.<br>
+  Jag svarar så snart jag kan.</p>
 
   <div class="info">
-    <p><strong>E-post:</strong> magnus.lulea@proton.me</p>
-    <p><strong>Telefon:</strong> 072-8502584</p>
+    <p><strong>E-post:</strong> Admins mejl</p>
+    <p><strong>Telefon:</strong> Admins tel nr</p>
   </div>
 
   <a href="mailto:magnus.lulea@proton.me" class="btn">📧 Skicka e-post</a>
   <button class="btn" onclick="copyPhone()">📋 Kopiera telefonnummer</button>
 
-  <a href="./index.html" class="btn">🏠 Hem</a>
-  <a href="./support.html" class="btn">💖 Stöd</a>
-  <a href="./services.html" class="btn">💼 Tjänster</a>
-  <a href="./about.html" class="btn">👤 Om mig</a>
+  <div class="nav-row">
+    <a href="./index.html">🏠 Hem</a>
+    <a href="./support.html">💖 Stöd</a>
+    <a href="./services.html">💼 Tjänster</a>
+    <a href="./about.html">👤 Om mig</a>
+  </div>
 
   <footer>
     © 2025 Magnus T Gustav Sandberg — Kalix, Sverige
