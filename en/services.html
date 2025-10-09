@@ -3,158 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🌍 Services – Magnus T Gustav Sandberg</title>
-  <link rel="stylesheet" href="style.css?v=2" />
-
+  <meta name="description" content="Consulting, humanitarian technology, and BAUTA projects by Magnus T Gustav Sandberg — Vision Framtid.">
+  <title>Services — Magnus T Gustav Sandberg</title>
   <style>
     body {
-      background: #0b1220;
-      color: #f2f5ff;
-      font-family: "Inter", sans-serif;
-      margin: 0;
+      background: linear-gradient(180deg, #0d0f14 0%, #131722 100%);
+      color: #f0f0f0;
+      font-family: system-ui, sans-serif;
       text-align: center;
-      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      padding: 40px 20px 70px;
     }
 
     h1 {
-      font-size: clamp(28px, 5vw, 40px);
-      margin: 40px 0 10px;
-      color: #f8f9ff;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-    }
-
-    p {
-      max-width: 800px;
-      margin: 0 auto 25px;
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 17px;
-    }
-
-    .card {
-      background: #121a2c;
-      border-radius: 16px;
-      margin: 30px auto;
-      padding: 25px 20px 35px;
-      max-width: 860px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-      text-align: left;
-    }
-
-    .card h2 {
-      color: #7aa2ff;
-      font-size: 22px;
+      font-size: 1.9em;
+      color: #bcd4ff;
       margin-bottom: 12px;
     }
 
-    .card p {
-      color: #cbd5f7;
-      font-size: 16px;
+    p {
+      font-size: 1.05em;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto 30px;
     }
 
-    .btn {
-      display: inline-block;
-      background: #7aa2ff;
-      color: #06122a;
-      font-weight: 600;
-      border: none;
-      border-radius: 12px;
-      padding: 12px 26px;
-      cursor: pointer;
-      font-size: 16px;
-      text-decoration: none;
-      transition: all 0.3s ease;
+    /* Consulting block */
+    .consulting {
+      background-color: rgba(255, 255, 255, 0.04);
+      border-radius: 14px;
+      max-width: 750px;
+      margin: 40px auto 50px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
     }
 
-    .btn:hover {
-      background: #9bb8ff;
-      transform: scale(1.05);
+    .consulting h1 {
+      font-size: 1.7em;
+      color: #d0e0ff;
+      margin-bottom: 10px;
     }
 
-    .button-group {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
+    .consulting p {
+      font-size: 1.05em;
+      color: #e8e8e8;
     }
 
+    /* Projects */
     .project-gallery {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
       justify-content: center;
-      gap: 16px;
-      margin: 20px 0 10px;
+      margin: 30px auto 40px;
+      max-width: 600px;
     }
 
     .project-gallery img {
-      width: 150px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .project-gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+      transform: scale(1.03);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
     }
 
-    footer {
-      color: #999;
-      font-size: 14px;
-      padding: 40px 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 40px;
+    /* Buttons */
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .dark-btn {
+      display: block;
+      width: 90%;
+      max-width: 320px;
+      background-color: #333;
+      color: white;
+      padding: 16px 20px;
+      border-radius: 14px;
+      font-size: 17px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
+      transition: all 0.25s ease;
+    }
+
+    .dark-btn:hover {
+      background-color: #444;
+      transform: translateY(-2px);
+    }
+
+    footer p {
+      margin-top: 45px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      .project-gallery {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
-  <h1>🌍 Services</h1>
-  <p>
-    I design and develop web platforms, apps and humanitarian tech under the umbrella of
-    <strong>Vision Framtid</strong> — merging technology, compassion and purpose.
-  </p>
-
-  <!-- Project 1 -->
-  <section class="card">
-    <h2>Example Project: Fatimah Support</h2>
+  <!-- Consulting section -->
+  <section class="consulting">
+    <h1>💼 Consulting & Collaboration</h1>
     <p>
-      One of my ongoing humanitarian projects is <strong>Fatimah Support</strong> — a site built to help a woman in Ghana receive food and basic support through direct donations.
+      Magnus T Gustav Sandberg offers consulting services in web development, AI research,
+      quantum and humanitarian technology under <strong>Vision Framtid</strong>.<br><br>
+      <strong>Private clients:</strong> 80 USD / hour<br>
+      <strong>Companies & organizations:</strong> 150 USD / hour<br><br>
+      For collaborations or inquiries, please use the
+      <a href="contact.html" style="color:#bcd4ff;text-decoration:none;font-weight:600;">Contact page</a>.
     </p>
-    <div class="button-group">
-      <a href="https://magnussandberg72.github.io/fatimah-support/index.html" target="_blank" class="btn">Visit Fatimah Support →</a>
-    </div>
-    <p style="text-align:center;margin-top:10px;font-style:italic;color:#b7c3ea;">(my latest project)</p>
   </section>
 
-  <!-- Project 2 -->
-  <section class="card">
-    <h2>Future Projects</h2>
+  <!-- Future projects -->
+  <section class="services">
+    <h1>🚀 Future Projects</h1>
     <p>
-      Current focus: expanding <strong>BAUTA projects</strong> in Africa — including free hospitals,
-      medicine factories, microloan banks, and renewable energy hubs. <br>
-      Motto: <em>"Free of charge — for Africa."</em>
+      Current focus: expanding <strong>BAUTA projects</strong> in Africa — including
+      free hospitals, medicine factories, microloan banks, and renewable energy hubs.<br><br>
+      <em>Motto:</em> <strong>"Free of charge — for Africa."</strong>
     </p>
 
-    <!-- 🔹 Gallery -->
+    <!-- Gallery -->
     <div class="project-gallery">
-      <img src="../public/microloans3.png" alt="Microloan Projects">
-      <img src="../public/vision-framtid-2025.png" alt="Vision Framtid">
-      <img src="../public/vico1-visionframtid.png" alt="VICO-1 Medical AI">
-      <img src="../public/BAUTA-waterwellsdrilling.png" alt="BAUTA Water Wells Drilling Project">
+      <img src="../public/microloans3.png" alt="Microloan Bank">
+      <img src="../public/vision-framtid-2025.png" alt="Vision Framtid 2025">
+      <img src="../public/vico1-visionframtid.png" alt="VICO-1 Cancer Treatment">
+      <img src="../public/BAUTA-waterwellsdrilling.png" alt="BAUTA Water Wells Drilling">
     </div>
 
-    <!-- 🔹 Buttons -->
+    <!-- Buttons -->
     <div class="button-group">
-      <a href="services.html" class="btn">Services</a>
-      <a href="support.html" class="btn">Support</a>
-      <a href="index.html" class="btn">Back</a>
+      <a href="services.html" class="dark-btn">🧭 Services</a>
+      <a href="support.html" class="dark-btn">💖 Support</a>
+      <a href="index.html" class="dark-btn">⬅️ Back</a>
     </div>
-  </section>
 
-  <footer>
-    © 2025 Magnus T Gustav Sandberg – Vision Framtid
-  </footer>
+    <footer>
+      <p>© 2025 Magnus T Gustav Sandberg — Vision Framtid</p>
+    </footer>
+  </section>
 </body>
 </html>
