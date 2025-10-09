@@ -4,122 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact – Magnus T Gustav Sandberg</title>
-  <meta name="description" content="Get in touch with Magnus T Gustav Sandberg — web developer, creator, and founder of Vision Framtid." />
+  <meta name="description" content="Contact Magnus T Gustav Sandberg – AI developer, visionary, and consultant based in Kalix, Sweden. Reach out for collaborations, ideas, or consulting projects.">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: system-ui, sans-serif;
+      background-color: #000;
+      color: #fff;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #111, #222);
-      color: #eee;
       text-align: center;
     }
-
-    header img {
+    img {
       width: 100%;
-      height: auto;
-      display: block;
+      max-height: 320px;
+      object-fit: cover;
+      border-bottom: 2px solid #333;
     }
-
-    main {
-      padding: 40px 20px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
     h1 {
-      margin-bottom: 20px;
+      font-size: 2rem;
+      margin-top: 20px;
       color: #fff;
     }
-
     p {
-      color: #ddd;
-      margin-bottom: 25px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 10px 20px;
     }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      background: rgba(255,255,255,0.05);
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      color: #222;
-    }
-
-    textarea {
-      resize: vertical;
-      height: 120px;
-    }
-
-    .btn {
-      background-color: #444;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 8px;
+    .info {
+      font-size: 1.2rem;
+      margin-top: 20px;
       font-weight: bold;
+    }
+    .btn, button.btn {
+      display: block;
+      background-color: #333;
+      color: #fff;
+      font-weight: bold;
+      padding: 16px 24px;
+      border: none;
+      border-radius: 10px;
+      margin: 12px auto;
+      width: 85%;
+      max-width: 360px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
       cursor: pointer;
-      font-size: 16px;
-      transition: background 0.3s;
+      transition: background-color 0.2s;
     }
-
-    .btn:hover {
-      background-color: #666;
+    .btn:hover, button.btn:hover {
+      background-color: #444;
     }
-
     footer {
-      background: #000;
-      text-align: center;
+      background-color: #111;
       color: #ccc;
+      font-size: 0.9rem;
       padding: 20px;
       margin-top: 40px;
-      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="../magnus-irl.jpg" alt="Magnus T Gustav Sandberg" />
-  </header>
+  <img src="../public/magnus-irl.jpg" alt="Magnus T Gustav Sandberg" />
 
-  <main>
-    <h1>Contact Magnus</h1>
-    <p>
-      You’re welcome to reach out for collaborations, project ideas, or consulting inquiries.  
-      I personally respond to all messages when possible.
-    </p>
+  <h1>Contact</h1>
+  <p>You’re welcome to reach out for collaborations, project ideas, or consulting inquiries.<br>
+  I personally respond to all messages when possible.</p>
 
-    <p><strong>Email:</strong> <a href="mailto:magnus.lulea@proton.me" style="color:#58a6ff;">magnus.lulea@proton.me</a></p>
+  <div class="info">
+    <p><strong>Email:</strong> magnus.lulea@proton.me</p>
     <p><strong>Phone:</strong> +46 72 850 2584</p>
+  </div>
 
-    <form action="mailto:magnus.lulea@proton.me" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="email" placeholder="Your email" required />
-      <textarea name="message" placeholder="Your message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+  <a href="mailto:magnus.lulea@proton.me" class="btn">📧 Send Email</a>
+  <button class="btn" onclick="copyPhone()">📋 Copy Phone Number</button>
 
-    <div style="margin-top:40px;">
-      <a href="about.html" class="btn">About</a>
-      <a href="support.html" class="btn">Support</a>
-      <a href="index.html" class="btn">Back</a>
-    </div>
-  </main>
+  <a href="./index.html" class="btn">🏠 Home</a>
+  <a href="./support.html" class="btn">💖 Support</a>
+  <a href="./services.html" class="btn">💼 Services</a>
+  <a href="./about.html" class="btn">👤 About</a>
 
   <footer>
     © 2025 Magnus T Gustav Sandberg — Kalix, Sweden
   </footer>
+
+  <script>
+    function copyPhone() {
+      navigator.clipboard.writeText('+46728502584');
+      alert('📞 Phone number copied!');
+    }
+  </script>
 
 </body>
 </html>
