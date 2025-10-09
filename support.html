@@ -6,7 +6,7 @@
 
   <div class="bank-section">
     <h2>🏦 Bank överföring</h2>
-    <p>Ditt stöd bidrar till utveckling och drift av sajterna och apparna – gåvan är värdefull ❤️🙏✝️</p>
+    <p>Ditt stöd bidrar till utveckling och drift av sajterna och apparna – din gåva är värdefull ❤️🙏✝️</p>
     <button onclick="copyBankInfo()">Visa bankinfo</button>
   </div>
 
@@ -27,7 +27,7 @@
 
 <style>
   body {
-    background-color: #0f0f0f;
+    background: linear-gradient(180deg, #0b0b0f 0%, #111621 100%);
     color: #f0f0f0;
     font-family: system-ui, sans-serif;
     text-align: center;
@@ -39,40 +39,55 @@
     padding: 40px 20px 70px;
   }
 
+  h1 {
+    font-size: 1.9em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    line-height: 1.6;
+    font-size: 1.05em;
+  }
+
   .portrait {
-    width: 260px;
+    width: 270px;
     height: auto;
     border-radius: 1000px;
-    margin: 25px auto;
+    margin: 30px auto;
     display: block;
-    box-shadow: 0 0 35px rgba(255,255,255,0.15);
+    box-shadow: 0 0 40px rgba(255, 210, 160, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.08);
   }
 
   .bank-section, .swish-section {
-    background: #1a1a1a;
-    border-radius: 20px;
-    padding: 30px 25px;
-    margin: 35px auto;
+    background: rgba(26, 26, 30, 0.9);
+    border-radius: 22px;
+    padding: 35px 25px;
+    margin: 40px auto;
     max-width: 500px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
+  }
+
+  h2 {
+    color: #bcd4ff;
   }
 
   button {
-    background-color: #3a3a3a;
+    background-color: #2f2f2f;
     color: white;
-    padding: 15px 30px;
+    padding: 16px 34px;
     border: none;
-    border-radius: 14px;
+    border-radius: 16px;
     font-size: 17px;
-    margin: 10px 6px;
+    margin: 10px 8px;
     cursor: pointer;
     font-weight: 600;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
   }
 
   button:hover {
-    background-color: #505050;
+    background-color: #474747;
     transform: translateY(-2px);
   }
 
@@ -80,7 +95,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 14px;
   }
 
   .back-btn {
@@ -88,10 +103,10 @@
     background-color: #2a2a2a;
     color: white;
     text-decoration: none;
-    padding: 15px 28px;
-    border-radius: 14px;
+    padding: 15px 30px;
+    border-radius: 16px;
     font-weight: 600;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.45);
     margin-top: 30px;
     font-size: 16px;
   }
@@ -99,6 +114,12 @@
   .back-btn:hover {
     background-color: #3a3a3a;
     transform: translateY(-2px);
+  }
+
+  footer p {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #ccc;
   }
 </style>
 
