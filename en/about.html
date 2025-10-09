@@ -3,150 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About – Magnus T Gustav Sandberg</title>
-  <meta name="description" content="About Magnus T Gustav Sandberg — vision, drive and current projects like Fatimah Support and BAUTA initiatives in Africa." />
+  <meta name="description" content="About Magnus T Gustav Sandberg — Vision Framtid founder and humanitarian tech architect." />
+  <title>About — Magnus T Gustav Sandberg</title>
   <style>
-    :root{
-      --bg:#111;
-      --panel:#1a1a1a;
-      --text:#eaeaea;
-      --muted:#cfcfcf;
-      /* mörkblå accent */
-      --accent:#0d47a1;   /* headings */
-      --accent-2:#1e40af; /* links/hover */
-      --btn:#2b2b2b;
-      --btn-hover:#444;
-      --radius:14px;
-      --shadow:0 8px 22px rgba(0,0,0,.18);
+    body {
+      background: linear-gradient(180deg, #0d0f14 0%, #131722 100%);
+      color: #f0f0f0;
+      font-family: system-ui, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
     }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.7;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
+    section {
+      padding: 40px 20px 80px;
     }
 
-    header{
-      padding:28px 16px 8px;
-      text-align:center;
-    }
-    header h1{
-      margin:0;
-      font-size:clamp(22px,4.5vw,36px);
-      letter-spacing:.4px;
+    h1 {
+      font-size: 2em;
+      color: #d2dbff;
+      margin-bottom: 15px;
     }
 
-    main{
-      max-width:900px;
-      margin:0 auto;
-      padding: 10px 18px 40px;
+    h2 {
+      color: #80aaff;
+      font-size: 1.4em;
+      margin-bottom: 10px;
     }
 
-    .section{
-      background:var(--panel);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding: clamp(18px,3.6vw,28px);
-      margin: 18px 0;
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      max-width: 720px;
+      margin: 0 auto 25px;
     }
 
-    h2{
-      margin:0 0 .6rem;
-      font-size:clamp(20px,3.6vw,28px);
-      color:var(--accent);    /* mörkblå rubriker */
-      letter-spacing:.3px;
+    img.portrait {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 20px auto 40px;
+      display: block;
+      box-shadow: 0 0 40px rgba(180, 220, 255, 0.25);
     }
 
-    p{color:var(--muted); margin:.6rem 0}
-
-    a{
-      color:var(--accent-2);  /* mörkblå länkar */
-      text-decoration: underline;
-    }
-    a:hover{opacity:.9}
-
-    .btn{
-      display:inline-block;
-      background:var(--btn);
-      color:#fff;
-      text-decoration:none;
-      padding:12px 18px;
-      border-radius:12px;
-      font-weight:700;
-      transition:background .2s, transform .08s;
-    }
-    .btn:hover{ background:var(--btn-hover) }
-    .btn:active{ transform: translateY(1px) }
-
-    .btn-primary{
-      background:var(--accent);
-    }
-    .btn-primary:hover{
-      background:#163996; /* lite mörkare blå vid hover */
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 18px;
+      padding: 25px 20px 35px;
+      max-width: 750px;
+      margin: 0 auto 40px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
     }
 
-    .nav{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-top:18px;
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 18px;
+      justify-content: center;
+      margin: 30px auto 20px;
+      max-width: 720px;
+    }
+
+    .project-gallery img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.55);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .project-gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.6);
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 35px;
+    }
+
+    .dark-btn {
+      display: inline-block;
+      background-color: #333;
+      color: white;
+      padding: 16px 22px;
+      border-radius: 14px;
+      font-size: 17px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.45);
+      transition: all 0.25s ease;
+    }
+
+    .dark-btn:hover {
+      background-color: #444;
+      transform: translateY(-2px);
+    }
+
+    footer p {
+      margin-top: 60px;
+      font-size: 1em;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8em; }
+      p { font-size: 1.05em; }
+      .card { padding: 22px 15px 30px; margin: 0 15px 35px; }
     }
   </style>
 </head>
+
 <body>
-
-  <header>
+  <section>
     <h1>About Me</h1>
-  </header>
+    <img src="../public/magnus-AI-2025.png" alt="Magnus T Gustav Sandberg" class="portrait">
 
-  <main>
-    <section class="section">
-      <h2>Vision &amp; Drive</h2>
+    <div class="card">
+      <h2>Vision & Drive</h2>
       <p>
-        My work is about more than technology — it’s about creating hope.
-        I believe technology should serve people, not the other way around.
+        My work is about more than technology — it’s about creating hope.  
+        I believe technology should serve people, not the other way around.  
         Every project I build is guided by love, fairness, and compassion.
       </p>
-    </section>
+    </div>
 
-    <section class="section">
+    <div class="card">
       <h2>Example Project: Fatimah Support</h2>
       <p>
-        One of my ongoing humanitarian projects is
-        <strong>Fatimah Support</strong> — a site built to help a woman in Ghana
-        receive food and basic support through direct donations.
+        One of my ongoing humanitarian projects is <strong>Fatimah Support</strong> —  
+        a site built to help a woman in Ghana receive food and basic support through direct donations.
       </p>
+      <a href="https://magnussandberg72.github.io/fatimah/" target="_blank" class="dark-btn">
+        Visit Fatimah Support →
+      </a>
+      <p style="font-style: italic; margin-top: 10px;">(my latest project)</p>
+    </div>
 
-      <div class="nav">
-        <a class="btn btn-primary"
-           href="https://magnussandberg72.github.io/fatimah-support/index.html"
-           target="_blank" rel="noopener">
-          Visit Fatimah Support →
-        </a>
-      </div>
-      <p style="text-align:center; margin-top:.6rem;"><em>(my latest project)</em></p>
-    </section>
-
-    <section class="section">
+    <div class="card">
       <h2>Future Projects</h2>
       <p>
-        Current focus: expanding <strong>BAUTA projects</strong> in Africa — including
-        free hospitals, medicine factories, microloan banks, and renewable energy hubs.
-        Motto: <em>“Free of charge — for Africa.”</em>
+        Current focus: expanding <strong>BAUTA projects</strong> in Africa — including  
+        free hospitals, medicine factories, microloan banks, and renewable energy hubs.  
+        <em>Motto:</em> <strong>"Free of charge — for Africa."</strong>
       </p>
 
-      <div class="nav">
-        <a class="btn" href="services.html">Services</a>
-        <a class="btn" href="support.html">Support</a>
-        <a class="btn" href="index.html">Back</a>
+      <div class="project-gallery">
+        <img src="../public/BAUTA-vision.png" alt="BAUTA Vision">
+        <img src="../public/BAUTA-waterwellsdrilling.png" alt="BAUTA Water Wells Drilling">
+        <img src="../public/BAUTA-1000rigs.png" alt="BAUTA 1000 Rigs">
+        <img src="../public/vico1-visionframtid.png" alt="VICO-1 Cancer Treatment">
       </div>
-    </section>
-  </main>
+
+      <div class="button-group">
+        <a href="services.html" class="dark-btn">🧭 Services</a>
+        <a href="support.html" class="dark-btn">💖 Support</a>
+        <a href="index.html" class="dark-btn">⬅️ Back</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Magnus T Gustav Sandberg — Vision Framtid</p>
+    </footer>
+  </section>
 </body>
 </html>
