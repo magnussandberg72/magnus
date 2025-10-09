@@ -1,95 +1,93 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt – Magnus T Gustav Sandberg</title>
   <style>
     body {
+      font-family: system-ui, sans-serif;
+      background-color: #000;
+      color: #fff;
       margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background-color: #0b0b0b;
-      color: #f2f2f2;
+      padding: 0;
       text-align: center;
     }
-
-    header {
-      padding: 2rem 1rem 1rem;
+    img {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      border-bottom: 2px solid #333;
     }
-
-    header img {
-      width: 180px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-      box-shadow: 0 0 15px rgba(255,255,255,0.2);
-    }
-
     h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.3rem;
+      font-size: 2rem;
+      margin-top: 20px;
+      color: #fff;
     }
-
     p {
-      margin: 0.5rem auto;
-      max-width: 600px;
-      line-height: 1.6;
-    }
-
-    .contact-info {
-      margin: 1.5rem 0;
       font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 10px 20px;
     }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
+    .info {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      font-weight: bold;
     }
-
-    button, a.button {
+    .btn {
+      display: inline-block;
       background-color: #333;
       color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 12px 20px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
+      font-weight: bold;
+      padding: 14px 24px;
+      border-radius: 10px;
+      margin: 10px auto;
+      width: 80%;
+      max-width: 320px;
       text-decoration: none;
-      transition: 0.2s;
+      font-size: 1.1rem;
+      transition: background 0.3s;
     }
-
-    button:hover, a.button:hover {
-      background-color: #555;
+    .btn:hover {
+      background-color: #444;
     }
-
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
     footer {
       background-color: #111;
       color: #ccc;
-      padding: 1.5rem;
       font-size: 0.9rem;
+      padding: 20px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="./public/magnus-irl.jpg" alt="Magnus T Gustav Sandberg" />
-    <h1>Kontakt</h1>
-    <p>Du kan kontakta mig för uppdrag, samarbeten eller frågor.<br>Jag svarar så snart jag kan.</p>
-  </header>
+  <img src="./public/magnus-irl.jpg" alt="Magnus T Gustav Sandberg">
 
-  <section class="contact-info">
+  <h1>Kontakt</h1>
+  <p>Du kan kontakta mig för uppdrag, samarbeten eller frågor.<br>Jag svarar så snart jag kan.</p>
+
+  <div class="info">
     <p><strong>E-post:</strong> magnus.lulea@proton.me</p>
     <p><strong>Telefon:</strong> 072-8502584</p>
-  </section>
+  </div>
 
-  <div class="buttons">
-    <a href="mailto:magnus.lulea@proton.me" class="button">📧 Skicka e-post</a>
-    <button onclick="copyPhone()">📋 Kopiera telefonnummer</button>
+  <a href="mailto:magnus.lulea@proton.me" class="btn">📧 Skicka e-post</a>
+  <button class="btn" onclick="copyPhone()">📋 Kopiera telefonnummer</button>
+
+  <div class="nav-buttons">
+    <a href="index.html" class="btn">🏠 Hem</a>
+    <a href="support.html" class="btn">💖 Stöd</a>
+    <a href="services.html" class="btn">💼 Tjänster</a>
+    <a href="about.html" class="btn">👤 Om mig</a>
   </div>
 
   <footer>
@@ -98,8 +96,8 @@
 
   <script>
     function copyPhone() {
-      navigator.clipboard.writeText("0728502584");
-      alert("Telefonnummer kopierat!");
+      navigator.clipboard.writeText('0728502584');
+      alert('📞 Telefonnummer kopierat!');
     }
   </script>
 
