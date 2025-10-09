@@ -35,36 +35,28 @@
       font-weight: bold;
     }
     .btn {
-      display: inline-block;
+      display: block;
       background-color: #333;
       color: #fff;
       font-weight: bold;
-      padding: 14px 24px;
+      padding: 16px 24px;
       border-radius: 10px;
-      margin: 10px auto;
-      width: 80%;
-      max-width: 320px;
+      margin: 12px auto;
+      width: 85%;
+      max-width: 360px;
       text-decoration: none;
       font-size: 1.1rem;
-      transition: background 0.3s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
     .btn:hover {
       background-color: #444;
-    }
-    .nav-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 40px;
-      margin-bottom: 20px;
     }
     footer {
       background-color: #111;
       color: #ccc;
       font-size: 0.9rem;
       padding: 20px;
-      margin-top: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -83,12 +75,10 @@
   <a href="mailto:magnus.lulea@proton.me" class="btn">📧 Skicka e-post</a>
   <button class="btn" onclick="copyPhone()">📋 Kopiera telefonnummer</button>
 
-  <div class="nav-buttons">
-    <a href="index.html" class="btn">🏠 Hem</a>
-    <a href="support.html" class="btn">💖 Stöd</a>
-    <a href="services.html" class="btn">💼 Tjänster</a>
-    <a href="about.html" class="btn">👤 Om mig</a>
-  </div>
+  <a href="./index.html" class="btn">🏠 Hem</a>
+  <a href="./support.html" class="btn">💖 Stöd</a>
+  <a href="./services.html" class="btn">💼 Tjänster</a>
+  <a href="./about.html" class="btn">👤 Om mig</a>
 
   <footer>
     © 2025 Magnus T Gustav Sandberg — Kalix, Sverige
