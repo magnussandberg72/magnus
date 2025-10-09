@@ -7,27 +7,27 @@
   <div class="bank-section">
     <h2>🏦 Bank överföring</h2>
     <p>Ditt stöd bidrar till utveckling och drift av sajterna och apparna – din gåva är värdefull ❤️🙏✝️</p>
-    <button onclick="copyBankInfo()">Visa bankinfo</button>
+    <button class="wide-btn" onclick="copyBankInfo()">Visa bankinfo</button>
   </div>
 
   <div class="swish-section">
     <h2>📱 Swish</h2>
     <p>Vill du stötta enkelt? Tryck på swishknappen här nedan för att öppna Swish-appen 💚</p>
     <div class="btn-row">
-      <button onclick="openSwish()">💚 Öppna Swish</button>
-      <button onclick="copySwish()">📋 Kopiera Swishnummer</button>
+      <button class="wide-btn" onclick="openSwish()">💚 Öppna Swish</button>
+      <button class="wide-btn" onclick="copySwish()">📋 Kopiera Swishnummer</button>
     </div>
   </div>
 
   <footer>
     <p>© 2025 Magnus T Gustav Sandberg — Kalix, Sverige</p>
-    <a href="index.html" class="back-btn">⬅️ Tillbaka hem</a>
+    <a href="index.html" class="wide-btn">⬅️ Tillbaka hem</a>
   </footer>
 </section>
 
 <style>
   body {
-    background: linear-gradient(180deg, #0b0b0f 0%, #111621 100%);
+    background-color: #0f0f0f;
     color: #f0f0f0;
     font-family: system-ui, sans-serif;
     text-align: center;
@@ -50,70 +50,54 @@
   }
 
   .portrait {
-    width: 270px;
+    width: 260px;
     height: auto;
     border-radius: 1000px;
     margin: 30px auto;
     display: block;
-    box-shadow: 0 0 40px rgba(255, 210, 160, 0.25);
-    border: 2px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 40px rgba(255, 200, 160, 0.2);
   }
 
   .bank-section, .swish-section {
-    background: rgba(26, 26, 30, 0.9);
-    border-radius: 22px;
-    padding: 35px 25px;
-    margin: 40px auto;
+    background: #1a1a1a;
+    border-radius: 18px;
+    padding: 30px 25px;
+    margin: 35px auto;
     max-width: 500px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.45);
   }
 
   h2 {
     color: #bcd4ff;
   }
 
-  button {
-    background-color: #2f2f2f;
+  .wide-btn {
+    display: block;
+    width: 90%;
+    max-width: 340px;
+    background-color: #333;
     color: white;
-    padding: 16px 34px;
+    padding: 16px 20px;
     border: none;
-    border-radius: 16px;
+    border-radius: 14px;
     font-size: 17px;
-    margin: 10px 8px;
+    margin: 14px auto;
     cursor: pointer;
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     transition: all 0.25s ease;
   }
 
-  button:hover {
-    background-color: #474747;
+  .wide-btn:hover {
+    background-color: #444;
     transform: translateY(-2px);
   }
 
   .btn-row {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .back-btn {
-    display: inline-block;
-    background-color: #2a2a2a;
-    color: white;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 16px;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.45);
-    margin-top: 30px;
-    font-size: 16px;
-  }
-
-  .back-btn:hover {
-    background-color: #3a3a3a;
-    transform: translateY(-2px);
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   footer p {
