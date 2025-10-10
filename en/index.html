@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Magnus — Welcome</title>
-  <meta name="description" content="Web design, AI and future projects with heart — by Magnus T Gustav Sandberg, Kalix Sweden.">
-
+  <title>Magnus T Gustav Sandberg</title>
+  <meta name="description" content="Web design, AI and future projects with heart – by Magnus T Gustav Sandberg, Kalix, Sweden.">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background-color: #000;
+      font-family: Arial, sans-serif;
+      background-color: #111;
       color: #fff;
-      font-family: system-ui, sans-serif;
       text-align: center;
     }
 
@@ -30,8 +28,8 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-15px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     header {
@@ -50,60 +48,138 @@
       left: 0;
       width: 100%;
       height: 150px;
-      background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+      background: linear-gradient(to bottom, rgba(0,0,0,0), #111);
     }
 
-    .nav-row {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin: 30px 0;
+    main {
+      background: #222;
+      padding: 60px 20px 50px;
     }
 
-    .nav-row a {
-      background-color: #333;
+    .tagline {
+      font-size: 16px;
+      color: #ccc;
+      letter-spacing: 0.5px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      background: rgba(255, 255, 255, 0.08);
       color: #fff;
-      font-weight: bold;
-      padding: 14px 22px;
+      padding: 22px 18px;
       border-radius: 10px;
-      text-decoration: none;
-      font-size: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-      transition: background-color 0.2s;
+      max-width: 750px;
+      margin: 0 auto 40px;
+      font-size: 18px;
+      line-height: 1.6;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     }
 
-    .nav-row a:hover {
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 50px;
+    }
+
+    .btn {
       background-color: #444;
+      color: white;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      width: 220px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #555;
+    }
+
+    .teaser {
+      background: #1a1a1a;
+      padding: 40px 20px 60px;
+    }
+
+    .teaser h2 {
+      color: #fff;
+      font-size: 22px;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .projects img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .projects img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(255, 255, 255, 0.3);
     }
 
     footer {
-      background-color: #111;
+      background-color: #000;
       color: #ccc;
-      font-size: 0.9rem;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 15px;
+      font-size: 14px;
     }
   </style>
 </head>
-
 <body>
-  <div class="top-header">🌟 Welcome to The Magnus ♥️</div>
+
+  <!-- 🌟 HEADER -->
+  <div class="top-header">
+    🌟 Welcome to The Magnus ♥️
+  </div>
 
   <header>
-    <img src="./public/magnus-alven.png" alt="Magnus portrait" />
+    <img src="../AI-stylad-magnus.png" alt="Magnus T Gustav Sandberg" />
     <div class="gradient"></div>
   </header>
 
-  <div class="nav-row">
-    <a href="./about.html">👤 About</a>
-    <a href="./services.html">💼 Services</a>
-    <a href="./support.html">💖 Support</a>
-    <a href="./contact.html">📬 Contact</a>
-  </div>
+  <main>
+    <div class="tagline">Web design, AI and future projects with heart</div>
+
+    <div class="intro">
+      <p>I design websites and applications – both my own projects and commissions for others.</p>
+      <p>Since I live on a low disability income, every payment or donation for my work is deeply appreciated.</p>
+    </div>
+
+    <div class="buttons">
+      <a href="support.html" class="btn">Support My Work</a>
+      <a href="about.html" class="btn">About Me</a>
+      <a href="services.html" class="btn">Services</a>
+      <a href="contact.html" class="btn">Contact</a>
+      <a href="../index.html" class="btn">Till den svenska sidan 🇸🇪</a>
+    </div>
+  </main>
+
+  <section class="teaser">
+    <h2>Some of My Projects</h2>
+    <div class="projects">
+      <img src="../vision-framtid-2025.png" alt="Vision Framtid 2025" />
+      <img src="../microloans1.png" alt="Microloan Project" />
+      <img src="../vico1-visionframtid.png" alt="VICO-1 Vision Framtid" />
+    </div>
+  </section>
 
   <footer>
-    © 2025 Magnus T Gustav Sandberg — Kalix, Sweden
+    © 2025 Magnus T Gustav Sandberg – Kalix, Sweden
   </footer>
+
 </body>
 </html>
