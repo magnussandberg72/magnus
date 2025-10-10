@@ -3,26 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magnus T Gustav Sandberg</title>
-  <meta name="description" content="Web design, AI and future projects with heart – by Magnus T Gustav Sandberg, Kalix, Sweden." />
+  <title>The Magnus — Welcome</title>
+  <meta name="description" content="Web design, AI and future projects with heart — by Magnus T Gustav Sandberg, Kalix Sweden.">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111;
+      padding: 0;
+      background-color: #000;
       color: #fff;
+      font-family: system-ui, sans-serif;
       text-align: center;
     }
 
+    /* 🌟 Welcome header */
     .top-header {
-      background: linear-gradient(to right, #444, #222);
-      color: #fff;
-      padding: 16px;
-      font-size: 20px;
+      background: linear-gradient(90deg, #333, #000);
+      padding: 18px;
+      font-size: 22px;
       font-weight: bold;
+      color: #fff;
       letter-spacing: 0.5px;
-      border-bottom: 2px solid #333;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      opacity: 0;
+      animation: fadeIn 1.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-15px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      position: relative;
     }
 
     header img {
@@ -37,156 +50,58 @@
       left: 0;
       width: 100%;
       height: 150px;
-      background: linear-gradient(to bottom, rgba(0,0,0,0), #111);
+      background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
     }
 
-    main {
-      background: #222;
-      padding: 60px 20px 50px;
-    }
-
-    .tagline {
-      font-size: 16px;
-      color: #ccc;
-      letter-spacing: 0.5px;
-      margin-bottom: 15px;
-    }
-
-    .intro {
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff;
-      padding: 22px 18px;
-      border-radius: 10px;
-      max-width: 750px;
-      margin: 0 auto 40px;
-      font-size: 18px;
-      line-height: 1.6;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    }
-
-    .buttons {
+    .nav-row {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 50px;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 30px 0;
     }
 
-    .btn {
-      background-color: #444;
-      color: white;
-      text-decoration: none;
-      padding: 14px 24px;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: bold;
-      width: 220px;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #777;
-    }
-
-    .teaser {
-      background: #1a1a1a;
-      padding: 40px 20px 60px;
-    }
-
-    .teaser h2 {
+    .nav-row a {
+      background-color: #333;
       color: #fff;
-      font-size: 22px;
-      margin-bottom: 25px;
-      letter-spacing: 1px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .projects img {
-      width: 100%;
+      font-weight: bold;
+      padding: 14px 22px;
       border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      transition: background-color 0.2s;
     }
 
-    .projects img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 18px rgba(255, 255, 255, 0.3);
+    .nav-row a:hover {
+      background-color: #444;
     }
 
     footer {
-      background-color: #000;
+      background-color: #111;
       color: #ccc;
-      padding: 15px;
-      font-size: 14px;
+      font-size: 0.9rem;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
-<body>
 
-  <div class="top-header">
-    Welcome to The Magnus^^ ♥️
-  </div>
+<body>
+  <div class="top-header">🌟 Welcome to The Magnus ♥️</div>
 
   <header>
-    <img src="../AI-stylad-magnus.png" alt="Magnus T Gustav Sandberg" />
+    <img src="./public/magnus-alven.png" alt="Magnus portrait" />
     <div class="gradient"></div>
   </header>
 
-  <main>
-    <div class="tagline">Web design, AI and visionary projects with heart</div>
-
-    <div class="intro">
-      <p>I design websites and apps — both my own projects and collaborations with others.</p>
-      <p>Every contribution for my creative work is deeply appreciated and helps me continue developing new humanitarian and technical projects.</p>
-    </div>
-
-    <div class="buttons">
-      <a href="support.html" class="btn">Support</a>
-      <a href="about.html" class="btn">About</a>
-      <a href="services.html" class="btn">Services</a>
-      <a href="contact.html" class="btn">Contact</a>
-      <a href="../index.html" class="btn">🇸🇪 Swedish site</a>
-    </div>
-  </main>
-<!-- PROJECT GALLERY -->
-<section class="teaser">
-  <h2>Some of my projects</h2>
-  <div class="projects">
-
-    <figure>
-      <img src="../public/AI-visionofJohn.png" alt="AI Vision of John" />
-      <figcaption>AI Vision of John — the first guardian concept in Vision Framtid, representing ethical AI awareness and light-based intelligence.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="../public/vision-framtid-2025.png" alt="Vision Framtid 2025" />
-      <figcaption>Vision Framtid — the unified cure platform combining ethics, quantum computing and global care systems.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="../public/vico1-visionframtid.png" alt="VICO-1 Vision Framtid" />
-      <figcaption>VICO-1 — advanced cancer and regeneration research developed within Vision Framtid.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="../public/microloans1.png" alt="Bank of Microloans" />
-      <figcaption>Bank of Microloans — financial empowerment for small entrepreneurs, providing hope and self-sufficiency in Africa.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="../public/view-of-universe-noice.png" alt="View of the Universe" />
-      <figcaption>View of the Universe — an artistic representation of Vision Framtid’s mission: to bring light, order, and meaning into technology.</figcaption>
-    </figure>
-
+  <div class="nav-row">
+    <a href="./about.html">👤 About</a>
+    <a href="./services.html">💼 Services</a>
+    <a href="./support.html">💖 Support</a>
+    <a href="./contact.html">📬 Contact</a>
   </div>
-</section>
+
   <footer>
     © 2025 Magnus T Gustav Sandberg — Kalix, Sweden
   </footer>
