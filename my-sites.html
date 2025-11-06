@@ -9,23 +9,21 @@
     html, body {
       margin: 0;
       padding: 0;
-      overflow-x: hidden; /* 🚫 Förhindrar horisontell scroll */
+      overflow-x: hidden;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
       color: #f5f5f5;
       text-align: center;
       line-height: 1.6;
       min-height: 100vh;
       background: url("public/magnus-AI-2025.png") center center / cover no-repeat fixed;
-      /* ↑ Bakgrund låst vertikalt */
-      background-color: #0b0b0f; /* fallback */
+      background-color: #0b0b0f;
       display: flex;
       flex-direction: column;
     }
 
-    /* 🌟 Header */
     header {
       background: rgba(0,0,0,0.6);
-      padding: 16px 10px 10px;
+      padding: 18px 10px;
       font-size: clamp(22px, 5vw, 28px);
       font-weight: 700;
       color: #fff;
@@ -46,24 +44,27 @@
       margin-top: 4px;
     }
 
-    /* 🌐 Grid layout */
+    /* 📱 Vertikal lista */
     main {
       flex: 1;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      padding: 28px 14px 60px;
-      max-width: 950px;
-      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+      padding: 30px 18px 70px;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .card {
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 14px;
+      width: 95%;
+      max-width: 420px;
+      background: rgba(0, 0, 0, 0.65);
+      border-radius: 16px;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
-      padding: 20px 14px;
+      padding: 22px 14px;
       transition: transform 0.2s ease, box-shadow 0.3s ease;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(8px);
     }
 
     .card:hover {
@@ -72,7 +73,7 @@
     }
 
     h2 {
-      font-size: clamp(16px, 4.5vw, 19px);
+      font-size: 18px;
       margin-bottom: 10px;
       color: #ffe199;
     }
@@ -83,10 +84,10 @@
       background: #2d2d2d;
       color: #fff;
       text-decoration: none;
-      padding: 10px 22px;
-      border-radius: 8px;
+      padding: 12px 26px;
+      border-radius: 10px;
       font-weight: 600;
-      font-size: 15px;
+      font-size: 16px;
       transition: background 0.25s ease;
     }
 
@@ -102,24 +103,6 @@
       text-align: center;
       backdrop-filter: blur(4px);
     }
-
-    @media (max-width: 500px) {
-      header {
-        padding: 14px 6px 6px;
-        font-size: 22px;
-      }
-      .tagline {
-        font-size: 13px;
-        margin-top: 2px;
-      }
-      main {
-        padding: 22px 10px 50px;
-        gap: 14px;
-      }
-      .card {
-        padding: 16px 12px;
-      }
-    }
   </style>
 </head>
 
@@ -131,32 +114,32 @@
 
   <main>
     <div class="card">
-      <h2>Politiken och Jesus 🙏🏼</h2>
+      <h2>Politics and Jesus 🙏🏼</h2>
       <a class="btn" href="https://magnussandberg72.github.io/PoliticsWorldwide/index.html" target="_blank">Visit site</a>
     </div>
 
     <div class="card">
-      <h2>Min presentationssajt</h2>
+      <h2>My presentationssite</h2>
       <a class="btn" href="https://magnussandberg72.github.io/magnus/index.html" target="_blank">Visit site</a>
     </div>
 
     <div class="card">
-      <h2>Afrika-projekten – BAUTA 🌍</h2>
+      <h2>Afrika-projekts – Bauta 🌍</h2>
       <a class="btn" href="https://magnussandberg72.github.io/Bauta-Project-site/index.html" target="_blank">Visit site</a>
     </div>
 
     <div class="card">
-      <h2>Psykisk hälsa – Mushroom Maniacs 🍄</h2>
+      <h2>about mental helth – Mushroom Maniacs 🍄</h2>
       <a class="btn" href="https://magnussandberg72.github.io/mushroom-maniacs/index.html" target="_blank">Visit site</a>
     </div>
 
     <div class="card">
-      <h2>Kyrkornas samlingssajt – TempelKistan ✝️</h2>
+      <h2>Sow to the Churches – Tempelchest ✝️</h2>
       <a class="btn" href="https://magnussandberg72.github.io/TempelKistan/index.html" target="_blank">Visit site</a>
     </div>
 
     <div class="card">
-      <h2>Hjälp mig betala lån 💰</h2>
+      <h2>Help with a loan 💰</h2>
       <a class="btn" href="https://magnussandberg72.github.io/magnus-loan/index.html" target="_blank">Visit site</a>
     </div>
 
@@ -171,12 +154,12 @@
     </div>
 
     <div class="card">
-      <h2>SOS – vid krig eller katastrof 🚨</h2>
+      <h2>SOS – aid site/app, at war or catastroph 🚨</h2>
       <a class="btn" href="https://magnussandberg72.github.io/SOS/index.html" target="_blank">Visit site</a>
     </div>
 
     <div class="card">
-      <h2>Väns butik – Blush Boutique 👜</h2>
+      <h2>a friends, Blush Boutique 👜</h2>
       <a class="btn" href="https://magnussandberg72.github.io/Blush-boutique/index.html" target="_blank">Visit site</a>
     </div>
   </main>
