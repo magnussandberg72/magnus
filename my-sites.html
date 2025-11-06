@@ -6,26 +6,32 @@
   <title>My Sites 🕊♥️🕊 – Magnus T Gustav Sandberg</title>
   <meta name="description" content="Samling av alla projekt- och hjälpsajter av Magnus T Gustav Sandberg – Vision Framtid, Bauta, Mushroom Maniacs, TempelKistan, SOS och mer.">
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* 🚫 Förhindrar horisontell scroll */
       font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
-      background: #0b0b0f;
       color: #f5f5f5;
       text-align: center;
       line-height: 1.6;
+      min-height: 100vh;
+      background: url("public/magnus-AI-2025.png") center center / cover no-repeat fixed;
+      /* ↑ Bakgrund låst vertikalt */
+      background-color: #0b0b0f; /* fallback */
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
     }
 
+    /* 🌟 Header */
     header {
-      background: linear-gradient(90deg, #111, #222);
-      padding: 22px 10px;
-      font-size: clamp(22px, 5vw, 30px);
+      background: rgba(0,0,0,0.6);
+      padding: 16px 10px 10px;
+      font-size: clamp(22px, 5vw, 28px);
       font-weight: 700;
       color: #fff;
       text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
       animation: fadeIn 1.2s ease forwards;
+      backdrop-filter: blur(6px);
     }
 
     @keyframes fadeIn {
@@ -34,29 +40,30 @@
     }
 
     .tagline {
-      font-size: 15px;
-      color: #ccc;
+      font-size: 14px;
+      color: #cfcfcf;
       display: block;
-      margin-top: 6px;
+      margin-top: 4px;
     }
 
+    /* 🌐 Grid layout */
     main {
       flex: 1;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      padding: 30px 16px 60px;
-      max-width: 1000px;
+      gap: 18px;
+      padding: 28px 14px 60px;
+      max-width: 950px;
       margin: 0 auto;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(0, 0, 0, 0.6);
       border-radius: 14px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
       padding: 20px 14px;
       transition: transform 0.2s ease, box-shadow 0.3s ease;
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(10px);
     }
 
     .card:hover {
@@ -65,7 +72,7 @@
     }
 
     h2 {
-      font-size: clamp(16px, 4.5vw, 20px);
+      font-size: clamp(16px, 4.5vw, 19px);
       margin-bottom: 10px;
       color: #ffe199;
     }
@@ -73,10 +80,10 @@
     a.btn {
       display: inline-block;
       margin-top: 10px;
-      background: #333;
+      background: #2d2d2d;
       color: #fff;
       text-decoration: none;
-      padding: 10px 20px;
+      padding: 10px 22px;
       border-radius: 8px;
       font-weight: 600;
       font-size: 15px;
@@ -88,19 +95,27 @@
     }
 
     footer {
-      background: #000;
+      background: rgba(0,0,0,0.7);
       color: #aaa;
-      padding: 22px;
+      padding: 20px;
       font-size: 14px;
       text-align: center;
+      backdrop-filter: blur(4px);
     }
 
     @media (max-width: 500px) {
-      main {
-        padding: 20px 10px 50px;
-        gap: 16px;
+      header {
+        padding: 14px 6px 6px;
+        font-size: 22px;
       }
-
+      .tagline {
+        font-size: 13px;
+        margin-top: 2px;
+      }
+      main {
+        padding: 22px 10px 50px;
+        gap: 14px;
+      }
       .card {
         padding: 16px 12px;
       }
